@@ -1,0 +1,96 @@
+.play
+	margin-bottom: 10px
+	&-category
+		background-color: #141414
+		height: $base-height
+		padding: 0 25px 0 10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		margin-bottom: 1px
+		&:before
+			content: ""
+			position: absolute
+			font-family: FontAwesome
+			color: #fff
+			font-size: 20px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover
+			background-color: lighten(#141414, 10%)
+		*
+			&:first-child
+				flex-grow: 1
+		
+		&.closed
+			&:hover
+				&:before
+					content: "\f107"
+		&.open
+			&:hover
+				&:before
+					content: "\f106"
+
+		&-icon
+			color: #fff
+			font-size: 20px
+			margin-right: 10px
+		&-text
+			color: $primary
+			text-transform: uppercase
+
+	&-subcategory
+		background-color: $second
+		height: $base-height
+		padding: 0 10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		position: relative
+		margin-bottom: 1px
+		&:before
+			content: ""
+			position: absolute
+			font-family: FontAwesome
+			color: #fff
+			font-size: 20px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover
+			background-color: lighten($second, 10%)
+		
+		&.closed
+			&:hover
+				&:before
+					content: "\f107"
+		&.open
+			&:hover
+				&:before
+					content: "\f106"
+
+		&-icon
+			height: auto
+			max-width: 23px
+			margin-right: 5px
+		&-text
+			color: #fff
+
+
+	&-link
+		background-color: #4a6066
+		padding: 10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		margin-bottom: 1px
+		&-block
+			&:first-child
+				width: 65%
+			&:last-child
+				width: 15%

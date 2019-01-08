@@ -1,0 +1,59 @@
+.ticket-block
+	background-color: #fff
+	padding: 2px
+	overflow-y: scroll
+	overflow-x: hidden
+	max-height: 100%
+	margin-bottom: 20px
+.ticket
+	border: 1px solid red
+	background-color: #fff
+	min-height: 36px
+	padding: 4px
+	padding-right: 40px
+	position: relative
+	border: 1px solid transparent
+	&:nth-child(even)
+		background-color: #e6e6e6
+	&:hover,
+	&:active,
+	&--active
+		background-color: #cbe8f6!important
+		border-color: #68bde5
+
+	*
+		font-weight: 300
+	.font
+		font-size: 13px
+
+
+	&__id
+		font-weight: bold
+		min-width: 22px
+	&__name
+		width: 100%
+	&__price
+		min-width: 15%
+		text-align: right
+		margin-left: 2px
+	&--go
+		.ticket__status
+			flex-grow: 1
+			color: red
+			font-weight: bold
+			&:before
+				content: 'Тираж уже начался	'
+
+	&__btn
+		top: 3px
+		bottom: 3px
+		right: 5px
+		width: 20px
+		background-color: #545454
+		color: $orange
+		font-weight: 600
+		position: absolute
+		padding: 2px
+		display: flex
+		align-items: center
+		justify-content: center

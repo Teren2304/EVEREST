@@ -1,0 +1,56 @@
+.button
+	@extend %font
+	@extend %input
+	border: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	&.coefficient
+		padding: 5px 10px
+		background-color: #485158
+		justify-content: space-between
+		color: #fff
+		.star
+			margin-right: 5px
+			&:before
+				color: $m-white
+			&:hover
+				&:before
+					color: #fff
+		&:hover
+			&:not(.active)
+				background-color: darken(#485158, 10%)
+				*
+					&:not(.star)
+						color: #fff
+		&-active
+			background-color: rgba(255,255,255,0.7)
+			*
+				&:not(.star)
+					color: #000
+
+	&.square
+		min:
+			height: $base-height
+			width: $base-height
+		max:
+			height: $base-height
+			width: $base-height
+
+	&.primary
+		background-color: $primary
+		color: #fff
+		&:hover,
+		&.active
+			background-color: darken($primary, 10%)
+
+	&.reload
+		padding: 0
+		min-width: 19px
+		max-width: 20px
+		background-color: $primary
+		color: #fff
+		font-size: 20px
+		&:hover,
+		&.active
+			background-color: darken($primary, 10%)

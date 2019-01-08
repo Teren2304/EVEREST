@@ -1,0 +1,41 @@
+.live-now-wrapper
+	width: 100%
+	overflow: hidden
+	.live-now
+		&:nth-child(n)
+			display: none
+		&:nth-child(1)
+			display: flex
+.live-now
+	width: 100%
+	&-left,
+	&-right
+		max-width: 50%
+		min-width: 50%
+
+	&-right
+		background-color: $third
+		&-text
+			padding: 5px 10px
+			*
+				color: #fff
+				&:first-child
+					width: 85%
+				&:last-child
+					width: 15%
+					text-align: left
+					white-space: nowrap
+		&-button
+			*
+				margin-bottom: 1px
+				&:last-child
+					margin-bottom: 0
+
+
+@media print, screen and (min-width: 2000px)
+	.live-now-wrapper
+		.live-now
+			&:nth-child(1),
+			&:nth-child(2)
+				display: flex
+				width: 50%

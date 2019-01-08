@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/sports-icon.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>Everest</title>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+	<div class="[ top ] container-fluid">
+		<div class="container">
+			<div class="[ top-wrapper ] flex-container align-justify align-middle">
+				<p class="font white text-uppercase">13 июля 16:14</p>
+				<div class="[ top-menu ] flex-container align-middle">
+					<a class="font text-uppercase [ top-menu-item ]">Баланс: 4,039 АЗН</a>
+					<a class="font text-uppercase [ top-menu-item ]">Касса №100</a>
+					<a class="font text-uppercase [ top-menu-item top-menu-link not-active ]">Тестовый кассир</a>
+					<div class="[ top-menu-dropdown not-active ]">
+						<a href="index4.html" class="[ top-menu-dropdown-item ]">Close shift</a>
+						<a href="index7.html" class="[ top-menu-dropdown-item ]">Exit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="[ nav ] container-fluid">
+		<div class="container flex-container align-middle">
+			<div class="content left">
+				<a href="index.html" class="[ logo ]"><img src="./img/logo.png" alt="Everest bet"></a>
+			</div>
+			<div class="content center flex-container align-middle align-justify">
+				<menu class="[ menu ] flex-container align-center-middle">
+					<a href="index.html" class="font [ menu-item active ]">Live (57)</a>
+					<a href="index2.html" class="font [ menu-item ]">Линия</a>
+					<a href="index4.html" class="font [ menu-item ]">Live Монитор</a>
+				</menu>
+				<div class="menu-dropdown-wrapper">
+					<div class="[ show-menu ]">
+						<div class="[ show-menu-item ]"></div>
+						<div class="[ show-menu-item ]"></div>
+						<div class="[ show-menu-item ]"></div>
+						<div class="[ show-menu-item ]"></div>
+					</div>
+					<div class="[ menu-dropdown not-active ]">
+						<a href="index6.html" class="[ menu-dropdown-item ]">Reports</a>
+						<a href="index3.html" class="[ menu-dropdown-item ]">Services</a>
+						<a href="index4.html" class="[ menu-dropdown-item ]">Operations</a>
+						<a href="index5.html" class="[ menu-dropdown-item ]">Players</a>
+					</div>
+				</div>
+			</div>
+			<div class="content right">
+				<div class="[ search ] flex-container">
+					<input class="[ search-field ] field" type="text" placeholder="Поиск купона">
+					<button class="[ search-button ] button square primary"></button>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+<!-- End Header -->
+
+<div class="main">
+	<div class="container flex-container">
+		<div class="content center">
+			<div class="[ players ]">
+				<div class="[ players-header ]">
+					<div class="[ tab-header ] flex-container align-middle">
+						<a class="[ tab-link active ] font" data="#tab-body-1">Create account</a>
+						<a class="[ tab-link ] font" data="#tab-body-2">Deposit</a>
+						<a class="[ tab-link ] font" data="#tab-body-3">Withdrawal</a>
+						<a class="[ tab-link ] font" data="#tab-body-4">Orders</a>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body active ]" id="tab-body-1">
+					<div class="[ players-body ]">
+						<div class="[ players-balance ] flex-container align-justify">
+							<p class="font white">Activation amount:</p>
+							<select class="select [ players-select ]">
+								<option value="1">10 USD</option>
+							</select>
+							<p class="font white sm">USD</p>
+						</div>
+						<p class="font [ players-text ]">First Name: <sup class="font primary">*</sup></p>
+						<input type="text" class="[ players-field ] field">
+						<p class="font [ players-text ]">Last Name: <sup class="font primary">*</sup></p>
+						<input type="text" class="[ players-field ] field">
+						<div class="flex-container align-bottom">
+							<div class="w50 mr">
+								<p class="font [ players-text ]">Gender:</p>
+								<div class="flex-container align-middle mb">
+									<input type="radio" class="radio" id="man" name="male" value="man" checked="">
+									<label for="man" class="font white ml">Male</label>
+								</div>
+								<div class="flex-container align-middle mt">
+									<input type="radio" class="radio" id="woman" name="male" value="woman">
+									<label for="woman" class="font white ml">Female</label>
+								</div>
+								<p class="font [ players-text ]">Email address: <sup class="font primary">*</sup></p>
+								<input type="text" class="[ players-field ] field">
+							</div>
+							<div class="w50 ml">
+								<p class="font [ players-text ]">Confirmation by:</p>
+								<div class="flex-container align-middle mb">
+									<input type="radio" class="radio" id="email" name="email" value="man" checked="">
+									<label for="email" class="font white ml">Email</label>
+								</div>
+								<div class="flex-container align-middle mt">
+									<input type="radio" class="radio" id="emailsms" name="email" value="emailsms">
+									<label for="emailsms" class="font white ml">Email and sms</label>
+								</div>
+								<p class="font text-nowrap [ players-text ]">Mobile number (example: +79161234567):</p>
+								<input type="text" class="[ players-field ] field" value="+">
+							</div>
+						</div>
+					</div>
+					<div class="[ players-footer ] flex-container align-middle">
+						<button class="button primary [ players-button disabled ]">Register</button>
+						<button class="button primary [ players-button ]">Clear</button>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body ]" id="tab-body-2">
+					<div class="[ players-body ]">
+						<div class="[ tab-body ]">
+							<p class="font [ players-text ]">Player ID: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]">Amount: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]" style="margin: 20px 0;">Currency: (<strong>USD</strong>)</p>
+
+							<p class="font [ players-text ]">Cashier password: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ players-field ] field">
+						</div>
+					</div>
+					<div class="[ players-footer ] flex-container align-middle">
+						<button class="button primary [ players-button disabled ]">Next</button>
+						<button class="button primary [ players-button ]">Clear</button>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body ]" id="tab-body-3">
+					<div class="[ players-body ]">
+						<div class="[ tab-body ]">
+							<p class="font [ players-text ]">Player ID: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]">Amount: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]" style="margin: 20px 0;">Currency: (<strong>USD</strong>)</p>
+
+							<p class="font [ players-text ]">Cashier password: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ players-field ] field">
+						</div>
+					</div>
+					<div class="[ players-footer ] flex-container align-middle">
+						<button class="button primary [ players-button disabled ]">Create order</button>
+						<button class="button primary [ players-button ]">Cancel</button>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body ]" id="tab-body-4">
+					<div class="[ players-body ]" style="width: 100%">
+						<div class="[ tab-body ]">
+							<div class="table [ players-table ]">
+								<div class="row">
+									<div class="cell"><strong>#</strong></div>
+									<div class="cell"><strong>Status</strong></div>
+									<div class="cell"><strong>Amount</strong></div>
+									<div class="cell"><strong>Expire</strong></div>
+								</div>
+								<div class="row align-center">
+									<p class="font">Not found</p>
+								</div>
+								
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124150</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">10.00</p></div>
+										<div class="cell"><p class="font">20.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124151</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">11.00</p></div>
+										<div class="cell"><p class="font">21.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124152</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">12.00</p></div>
+										<div class="cell"><p class="font">22.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124153</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">13.00</p></div>
+										<div class="cell"><p class="font">23.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124154</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">14.00</p></div>
+										<div class="cell"><p class="font">24.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124155</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">15.00</p></div>
+										<div class="cell"><p class="font">25.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124156</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">16.00</p></div>
+										<div class="cell"><p class="font">26.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124157</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">17.00</p></div>
+										<div class="cell"><p class="font">27.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124158</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">18.00</p></div>
+										<div class="cell"><p class="font">28.07.2018 13:47</p></div>
+									</div>
+									<div class="row">
+										<div class="cell"><a class="font text-underline">124159</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">19.00</p></div>
+										<div class="cell"><p class="font">29.07.2018 13:47</p></div>
+									</div>
+								<div class="row">
+									<div class="cell">
+										<p class="font">1 order(s)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>

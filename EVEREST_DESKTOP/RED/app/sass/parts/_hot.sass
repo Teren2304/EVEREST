@@ -1,0 +1,25 @@
+.hot
+	background-color: $third
+	width: 100%
+	height: $base-height
+	&-title
+		width: 100px
+		position: relative
+		color: #fff
+		background-color: $primary
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+	&-item
+		padding: 0 10px 0 15px
+		position: relative
+		&:before
+			content: ""
+			height: 5px
+			width: 5px
+			+absolute-left
+			left: 5px
+			border-radius: 100%
+			transform: translateY(-50%) rotate(45deg)
+			background-color: #fff

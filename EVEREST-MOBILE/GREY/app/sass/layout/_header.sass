@@ -1,0 +1,90 @@
+.header
+	.top
+		background-color: #fff
+		*
+			color: #000
+		&-wrapper
+			padding: 10px 5px
+		&-menu
+			&-item
+				margin-right: 5px
+				font-size: 12px
+				&:last-child
+					margin-right: 0
+			&-dropdown
+				position: relative
+				padding-right: 15px
+				color: $primary
+				&:after
+					color: #000
+					font:
+						family: FontAwesome
+						size: 18px
+					+absolute-right
+				&.active
+					color: #000
+					&:after
+						content: '\f106'
+				&.not-active
+					&:after
+						content: '\f107'
+	.nav
+		background-image: url('../img/header-bg.png')
+		height: 70px
+		& > div
+			height: 100%
+			padding:
+				left: 5px
+				right: 5px
+	.menu
+		&-item
+			color: #fff
+			font-size: 20px
+			margin-right: 5px
+			border:
+				right: 1px solid #754100
+				bottom: 1px solid #754100
+				left: 1px solid #ffab42
+				top: 1px solid #ffab42
+			background: #ff940f
+			background: linear-gradient(180deg, #ff940f 31%, #be5a06 85%)
+			border-radius: 5px
+			&:before
+				font-family: FontAwesome
+			&:last-child
+				margin-right: 0
+			&.active
+				background: linear-gradient(180deg, darken(#ff940f, 10%) 31%, darken(#be5a06, 10%) 85%)
+	.logo
+		transform: translateX(20%)
+		max-width: 150px
+		margin:
+			left: 10px
+			right: 10px
+
+
+	.show-menu
+		width: 25px
+		position: relative
+		&:after
+			content: 'A-Z'
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translate(120%, -50%)
+			color: #fff
+		&-item
+			height: 2px
+			width: 25px
+			margin: 3px 0
+			display: block
+			background-color: #fff
+
+@media print, screen and (max-width: 400px)
+	.header
+		.logo
+			transform: translateX(5%)
+			max-width: 120px
+			margin:
+				left: 10px
+				right: 10px

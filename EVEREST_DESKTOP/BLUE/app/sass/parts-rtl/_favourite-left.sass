@@ -1,0 +1,29 @@
+.favourite
+	margin-bottom: 10px
+	&-category
+		padding: 5px 10px
+		position: relative
+		background-color: $primary
+		height: $base-height
+	&-link
+		height: $base-height
+		padding: 5px 10px
+		background-color: #4a6066
+		margin-bottom: 1px
+		&:hover,
+		&.active
+			background-color: lighten(#4a6066, 5%)
+			*
+				color: #fff
+		*
+			color: rgba(255,255,255,0.6)
+		&-icon
+			font-size: 18px
+			margin-left: 5px
+		&-text
+			&:nth-child(2)
+				flex-grow: 1
+				text-align: right
+			&:nth-child(3)
+				text-align: left
+				margin-right: 5px

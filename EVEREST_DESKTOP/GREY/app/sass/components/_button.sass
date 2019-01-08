@@ -1,0 +1,23 @@
+.button
+	@extend %font
+	@extend %input
+	border-radius: 5px
+	
+
+	&.square
+		min:
+			height: $base-height
+			width: $base-height
+		max:
+			height: $base-height
+			width: $base-height
+
+	&.primary
+		border:
+			right: 1px solid black
+			bottom: 1px solid black
+			left: 1px solid #636363
+			top: 1px solid #636363
+		background: #494949
+		background: linear-gradient(180deg, #494949 9%, #2a2a2a 57%)
+		color: #636363

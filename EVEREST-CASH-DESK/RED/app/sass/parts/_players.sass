@@ -1,0 +1,81 @@
+$players-width: 500px
+.players
+	&-body,
+	&-footer
+		padding: 10px
+	&-body
+		width: $players-width
+	&-footer
+		background-color: lighten(#281420, 5%)
+	&-header
+		border-bottom: 2px solid $primary
+		.tab-header
+			max-width: $players-width
+			.tab-link
+				width: auto
+				flex-grow: 0
+	&-tab-body
+		background-color: #281420
+		display: none
+		&.active
+			display: block
+		&.not-active
+			display: none
+
+	&-text
+		margin:
+			top: 10px
+			bottom: 5px
+		color: #fff
+	&-field,
+	&-select
+		max-width: $players-width
+		color: #fff
+		border: 1px solid #4e2d41
+		background-color: #20101a
+	&-select
+		margin:
+			left: auto
+			right: 5px
+		width: 120px
+		background-image: url(../img/select-arrow.png)
+
+	&-button
+		width: 100px
+		&:first-child
+			margin-right: 5px
+		&:last-child
+			margin-left: 5px
+		&.disabled
+			background-color: darken($primary, 20%)
+			cursor: default
+			pointer-events: none
+	&-balance
+		align-items: center
+		padding: 10px
+		background-color: #20101a
+		border: 1px solid #4e2d41
+		width: 100%
+		&-cash
+			color: $primary
+	&-table
+		.row
+			height: $base-height
+			background-color: #fff
+			margin-bottom: 1px
+			&:first-child,
+			&:last-child
+				background-color: lighten($second, 5%)
+				margin-bottom: 0
+				*
+					color: #fff
+		.cell
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				width: 25%
+				padding:
+					left: 10px
+					right: 10px
+				justify-content: flex-start

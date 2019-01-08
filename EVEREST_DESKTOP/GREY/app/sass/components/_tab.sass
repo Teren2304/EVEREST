@@ -1,0 +1,35 @@
+.tab
+	&-header
+		border-radius: 5px 5px 0 0
+		overflow: hidden
+		position: relative
+		height: $base-height
+		background-color: $base-background-color
+		&.border
+			&:after
+				content: ""
+				position: absolute
+				height: 2px
+				left: 0
+				bottom: 0
+				right: 0
+				background-color: #2a2a2a
+
+	&-link
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 10px
+		height: 100%
+		width: 50%
+		margin-right: 1px
+		color: rgba(255, 255, 255, 0.4)
+		background: $primary
+		background: linear-gradient(180deg, darken($primary, 5%) 9%, #2a2a2a 57%)
+		&:last-child
+			margin-right: 0
+		&.active,
+		&:hover
+			color: #fff
+			background: $primary
+			background: linear-gradient(180deg, $primary 9%, #2a2a2a 57%)

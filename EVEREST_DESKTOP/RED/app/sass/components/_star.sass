@@ -1,0 +1,13 @@
+.star
+	cursor: pointer
+	&:before
+		content: '\f005'
+		font:
+			family: FontAwesome
+			size: 18px
+		color: $m-white
+		z-index: 2
+	&:hover,
+	&.active
+		&:before
+			color: #fff

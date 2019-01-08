@@ -1,0 +1,56 @@
+<div class="[ search not-active ] flex-container">
+	<input type="text" class="[ search-field ] field" placeholder="Search">
+	<button class="[ search-button ] button square primary"></button>
+</div>
+
+<div class="[ search-result not-active ]">
+	<div class="close [ search-result-close ]"></div>
+	<p class="font text-uppercase [ search-result-title ]">Результаты для <span class="font bold text-uppercase">Динамо</span></p>
+	<div class="table scroll [ search-result-table ]">
+		<div class="table-category closed">
+			<span class="sports-4 mr"></span>
+			<span class="font text-uppercase">Football</span>
+		</div>
+		{% for i in range(0, 20) %}
+		<div class="table-row">
+			<div class="table-cell w15 flex-container align-center-middle">
+				<p class="font ellipsis">02:45 PM 3/16</p>
+			</div>
+			<div class="table-cell w28">
+				<button class="button coefficient">	
+					<p class="flex-container align-middle">
+						<span class="star"></span>
+						<span class="font ellipsis">Manchester City</span>
+					</p>
+					<span class="font up blick">1.11</span>
+				</button>
+			</div>
+			<div class="table-cell w15">
+				<button class="button coefficient">	
+					<span class="font">X</span>
+					<span class="font up blick">1.11</span>
+				</button>
+			</div>
+			<div class="table-cell w28">
+				<button class="button coefficient">	
+					<span class="star"></span>
+					<span class="font ellipsis">Manchester City</span>
+					<span class="font up blick">1.11</span>
+				</button>
+			</div>
+			<div class="table-cell p50">
+				<button class="button coefficient">
+					<span class="font ellipsis">+170</span>
+				</button>
+			</div>
+			<div class="table-cell p36">
+				<button class="button coefficient primary fa fa-bar-chart"></button>
+			</div>
+		</div>
+		{%- endfor %}
+	</div>
+	<div class="font [ search-result-more ]">
+		<span>Показать все результаты</span>
+		<span class="fa fa-angle-right ml"></span>
+	</div>
+</div>

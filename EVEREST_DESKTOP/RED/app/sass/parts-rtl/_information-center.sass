@@ -1,0 +1,44 @@
+$inform-size: 16px
+.information
+	padding: 10px
+	height: calc(100% - 1px)
+	position: relative
+	background-color: #281420
+	.star
+		&:before
+			color: #731225
+	&-icon
+		color: #fff
+		margin-left: 5px
+		&.star
+			&:before
+				font-size: 18px
+	&-separate
+		border: 0
+		margin:
+			left: 10px
+			right: 10px
+		width: 1px
+		height: 120%
+		background-color: $second
+	&-inform
+		color: darken($second, 10%)
+		min:
+			height: $inform-size
+			width: $inform-size
+		max:
+			height: $inform-size
+			width: $inform-size
+		position: relative
+		background-color: rgba(255,255,255,0.6)
+		border: 2px solid rgba(255,255,255,0.3)
+		border-radius: 50%
+		&:after
+			content: "i"
+			position: absolute
+			font:
+				size: 10px
+				style: italic
+				weight: bold
+				family: "Georgia", serif
+			+absolute-center

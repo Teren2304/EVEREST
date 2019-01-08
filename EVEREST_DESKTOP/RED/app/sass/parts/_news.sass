@@ -1,0 +1,42 @@
+.news
+	position: relative
+	height: 120px
+	width: 100%
+	&-wrapper
+		position: relative
+		overflow: hidden
+		width: 100%
+		padding: 0 30px
+	&-item
+		min-height: 120px!important
+		min-width: 140px
+		max-width: 140px
+		height: 100%
+		margin:
+			left: 1px
+			right: 1px
+		*
+			color: #fff
+		.button
+			display: none
+		.banner-shadow
+			background-color: #343341
+			height: 45px
+			padding: 5px
+			.font
+				display: block
+				overflow: hidden
+				white-space: nowrap !important
+				text:
+					overflow: ellipsis
+					align: left
+				max-width: 100%
+				&:after
+					content: attr(data)
+					display: block
+					color: $primary
+					text-align: center
+	.slider-prev,
+	.slider-next
+		top: 0
+		bottom: 0

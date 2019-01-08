@@ -1,0 +1,20 @@
+.live
+	&-title
+		background-color: $primary
+		height: $base-height
+		*
+			color: #fff
+		&-text
+			flex-grow: 1
+			text-align: center
+			span
+				display: inline-block
+				transform: translateX(50%)	
+		&-button
+			white-space: nowrap
+			max-width: 100px
+			background-color: darken($primary, 10%)
+			&.active
+				background-color: darken($primary, 15%)
+			&:before
+				font-size: 20px

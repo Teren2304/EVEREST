@@ -1,0 +1,56 @@
+$setting-width: 500px
+.setting
+	&-body,
+	&-footer
+		padding: 10px
+	&-footer
+		background-color: lighten(#281420, 5%)
+	&-header
+		border-bottom: 2px solid $primary
+		.tab-header
+			max-width: $setting-width
+			.tab-link
+				width: auto
+				flex-grow: 0
+	&-tab-body
+		background-color: #281420
+		display: none
+		&.active
+			display: block
+		&.not-active
+			display: none
+
+	&-text
+		margin:
+			top: 10px
+			bottom: 5px
+		color: #fff
+	&-field,
+	&-textarea
+		max-width: $setting-width
+		color: #fff
+		border: 1px solid #4e2d41
+		background-color: #20101a
+	&-textarea
+		width: 100%
+		padding: 5px 10px
+		height: 150px
+		resize: none
+	&-button
+		width: 100px
+		&:first-child
+			margin-right: 5px
+		&:last-child
+			margin-left: 5px
+		&.disabled
+			background-color: darken($primary, 20%)
+			cursor: default
+			pointer-events: none
+	&-balance
+		align-items: center
+		padding: 10px
+		background-color: #20101a
+		border: 1px solid #4e2d41
+		width: $setting-width
+		&-cash
+			color: $primary

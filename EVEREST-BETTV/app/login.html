@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>TEST</title>
+</head>
+<body style="background-color: #9f9f9f;">
+<!--Login-->
+<div class="modal modal-rate" id="modal-login">
+	<p class="font font--white">Логин</p>
+	<input type="text" class="input">
+	<p class="font font--white">Пароль</p>
+	<input type="text" class="input">
+	<div class="center-wrapper align-justify">
+		<button class="btn">
+			<span class="font">Подключить</span>
+		</button>
+		<button class="btn">
+			<span class="font font--orange">Отмена</span>
+		</button>
+	</div>
+	<p class="font font--white login__error" style="display: none">Неправильный логин/пароль.</p>
+	<p class="font font--white login__sucess" style="display: none">Подключение</p>
+	<a class="login__setting login__setting--not-active font--white">
+		<span class="fa fa-angle-down"></span>
+		<span class="font">Доп.настройки</span>
+	</a>
+	<div class="login__modal">
+		<button class="btn btn--not-active">
+			<span class="font">Сохранить логин</span>
+		</button>
+		<button class="btn btn--not-active">
+			<span class="font">Удалить логин</span>
+		</button>
+	</div>
+</div>
+<!--End Login-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js""></script>
+<script>
+	$('.login__setting').click(function(){
+		if ($(this).hasClass('login__setting--active')){
+			$(this).removeClass('login__setting--active').addClass('login__setting--not-active');
+			$('.login__modal').hide();
+		}
+		else{
+			$(this).removeClass('login__setting--not-active').addClass('login__setting--active');
+			$('.login__modal').show();	
+		}
+	});
+</script>
+</body>
+</html>

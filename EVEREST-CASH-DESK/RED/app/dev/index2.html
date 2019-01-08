@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/sports-icon.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>Everest</title>
+</head>
+<body>
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+<div class="main">
+	<div class="container flex-container">
+		<div class="content left">		
+			<div class="left-wrapper scroll">
+				<div class="[ tab-header border ] flex-container align-middle">
+					<a class="[ tab-link active ] font">+12 Часов</a>
+					<a class="[ tab-link ] font">+24 Часа</a>
+					<a class="[ tab-link ] font">Все</a>
+				</div>
+				<div class="[ play-category open ]">
+					<p class="[ play-category-icon ] sports-4"></p>
+					<p class="[ play-category-text ] font">Football</p>
+				</div>
+				<div class="[ play-wrapper ]">
+					{% set country = ["Argentina", 
+						"Armenia",
+						"Australia",
+						"Austria",
+						"Bahrain",
+						"Belarus",
+						"Belgium",
+						"Bolivia",
+						"Brazil",
+						"Bulgaria",
+						"Chile",
+						"China",
+						"Colombia",
+						"Costa-Rica",
+						"Croatia",
+						"Cyprus",
+						"Czech-Republic",
+						"Denmark",
+						"Ecuador",
+						"Egypt",
+						"England",
+						"Estonia",
+						"Finland",
+						"France",
+						"Georgia",
+						"Germany",
+						"Greece",
+						"Guatemala",
+						"Honduras",
+						"Hong-Kong",
+						"Hungary",
+						"Iceland",
+						"Indonesia"
+					] %}
+					{% for item in country %}
+						<div class="[ play-subcategory closed ]">
+							<img src="./img/icon_country/{{item}}.ico" class="[ play-subcategory-icon ]">
+							<p class="[ play-subcategory-text ] font">{{item}}</p>	
+						</div>
+						<div class="[ play-wrapper not-active ]">
+							<a class="[ play-link ] ellipsis">International. UEFA Europa League</a>
+							<a class="[ play-link ] ellipsis">International. UEFA Europa League</a>
+							<a class="[ play-link ] ellipsis">International. UEFA Europa League</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="content center">
+			<!-- Search main -->
+			{% include "parts/search-main.html" %}
+			<!-- End Search main -->
+
+			<div class="[ live-title ]  flex-container align-middle align-justify">
+				<p class="font text-uppercase">Live</p>
+				<div class="[ live-desktop ]"></div>
+				<div class="[ live-close ] close"></div>
+			</div>
+
+			<div class="[ live ]">
+				<div class="[ live-category ]">
+					<p class="[ live-category-icon ] sports-4"></p>
+					<p class="[ live-category-text ] font">Football</p>
+				</div>
+				{% for i in range(1, 10) %}
+					<div class="[ live-play ] flex-container align-middle">
+						<div class="[ live-play-id ]">
+							<p class="font xmd bold">93{{ i }}</p>
+							<p class="font">102{{ i }}</p>
+						</div>
+						<div class="[ live-play-icon ]">
+							<img src="./img/icon_country/Sweden.ico" alt="Sweden">
+						</div>
+						<div class="[ live-play-info ]">
+							<p class="font ellipsis xmd">IFK Hassleholm— Solvesborgs Goif</p>
+							<p class="font ellipsis sm">Sweden. Division 2 Ostra Gotaland</p>
+							<p class="font ellipsis">Тайм 1 (38 мин.)</p>
+						</div>
+						<div class="[ live-play-count ]">
+							<p class="font">0:0</p>
+						</div>
+					</div>
+					<div class="[ live-dropdown ]">
+						<div class="[ live-wrapper ]">
+						{% for i in range(1, 10) %}
+							<div class="[ live-table ]">
+								<div class="[ live-table-row ]">
+									<div class="[ live-table-cell ]">
+										<p class="font">1</p>
+									</div>
+									<div class="[ live-table-cell ]">
+										<p class="font">X</p>
+									</div>
+									<div class="[ live-table-cell ]">
+										<p class="font">2</p>
+									</div>
+								</div>
+								<div class="[ live-table-row ]">
+									<div class="[ live-table-cell count ]">
+										<p class="font">2.01</p>
+									</div>
+									<div class="[ live-table-cell count ]">
+										<p class="font">14.05</p>
+									</div>
+									<div class="[ live-table-cell count ]">
+										<p class="font">1.77</p>
+									</div>
+								</div>
+								<div class="[ live-table-row ]">
+									<div class="[ live-table-cell disabled ]">
+										<p class="font">2.01</p>
+									</div>
+									<div class="[ live-table-cell count ]">
+										<p class="font">14.05</p>
+									</div>
+									<div class="[ live-table-cell count ]">
+										<p class="font">1.77</p>
+									</div>
+								</div>
+							</div>
+							<div class="[ live-table ]">
+								<div class="[ live-table-row ]">
+									<div class="[ live-table-cell ]">
+										<p class="font">1 Total (with OT)</p>
+									</div>
+									<div class="[ live-table-cell ]">
+										<p class="font">Over</p>
+									</div>
+									<div class="[ live-table-cell ]">
+										<p class="font">Under</p>
+									</div>
+								</div>
+								<div class="[ live-table-row ]">
+									<div class="[ live-table-cell ]">
+										<p class="font">72.01</p>
+									</div>
+									<div class="[ live-table-cell count up ]">
+										<p class="font">1.96</p>
+									</div>
+									<div class="[ live-table-cell count down ]">
+										<p class="font">1.76</p>
+									</div>
+								</div>
+							</div>
+						{%- endfor %}
+						</div>
+					</div>
+				{%- endfor %}
+				<div class="[ live-play ] flex-container align-middle">
+					<div class="[ live-play-id ]">
+						<p class="font xmd bold">933</p>
+						<p class="font">1022</p>
+					</div>
+					<div class="[ live-play-icon ]"></div>
+					<div class="[ live-play-info ]">
+						<p class="font ellipsis">1 период</p>
+					</div>
+					<div class="[ live-play-count ]"></div>
+				</div>
+			</div>
+			<div class="[ live ]">
+				<div class="[ live-category ]">
+					<p class="[ live-category-icon ] sports-7"></p>
+					<p class="[ live-category-text ] font">Basketball</p>
+				</div>
+				{% for i in range(1, 10) %}
+					<div class="[ live-play ] flex-container align-middle">
+						<div class="[ live-play-id ]">
+							<p class="font xmd bold">93{{ i }}</p>
+							<p class="font">102{{ i }}</p>
+						</div>
+						<div class="[ live-play-icon ]">
+							<img src="./img/icon_country/England.ico" alt="England">
+						</div>
+						<div class="[ live-play-info ]">
+							<p class="font ellipsis xmd">IFK Hassleholm— Solvesborgs Goif</p>
+							<p class="font ellipsis sm">England. Division 2 Ostra Gotaland</p>
+							<p class="font ellipsis">Тайм 1 (38 мин.)</p>
+						</div>
+						<div class="[ live-play-count ]">
+							<p class="font">0:0</p>
+						</div>
+					</div>
+				{%- endfor %}
+			</div>
+		</div>
+		<div class="content right">
+			<!-- Betslip -->
+			{% include "parts/betslip.html" %}
+			<!-- End Betslip -->
+
+			<!-- Order -->
+			{% include "parts/order.html" %}
+			<!-- End Order -->
+		</div>
+	</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>

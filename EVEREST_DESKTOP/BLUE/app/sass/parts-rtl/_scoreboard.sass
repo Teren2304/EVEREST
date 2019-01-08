@@ -1,0 +1,169 @@
+.scoreboard
+	margin-bottom: 10px
+	position: relative
+	background:
+		repeat: no-repeat
+		size: cover
+	&:after
+		content: ""
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		z-index: 0
+		position: absolute
+		background-color: rgba(0, 0, 0, 0.5)
+	*
+		position: relative
+		z-index: 1
+	&-wrapper
+		padding: 5% 0
+	&-count
+		margin-bottom: 20px
+		&-text
+			color: #fff
+			margin: 0 10px
+			&.small
+				font-size: 22px
+			&.big
+				font-size: 32px
+	.table
+		display: table
+		border-collapse: collapse
+		margin-bottom: 0
+		background-color: transparent
+		width: 100%
+		max-width: 80%
+		margin: 0 auto
+		&-row
+			width: 100%
+			display: table-row
+			background-color: rgba(0,0,0,0.5)
+			&.title
+				background-color: $primary
+		&-cell
+			border: 1px solid rgba(255,255,255,0.2)
+			text-align: center
+			display: table-cell
+			padding: 5px
+			vertical-align: middle
+			min-width: 40px
+			
+	&-hide
+		position: absolute
+		left: 5px
+		top: 5px
+		font-size: 12px
+		padding: 5px 10px
+		cursor: pointer
+		z-index: 9
+		color: rgba(255, 255, 255, 0.6)
+		background-color: rgba(0, 0, 0, 0.8)
+		&:hover
+			color: #fff
+	&-text
+		&.primary
+			color: #fff
+		&.second
+			color: yellow
+	&-badge
+		height: 8px
+		width: 8px
+		border: 1px solid #000
+		margin: 0 5px
+		&.primary
+			background-color: grey
+		&.second
+			background-color: yellow
+	&-icon
+		margin: 0 auto
+		width: 17px
+		height: 15px
+		overflow: hidden
+		background:
+			repeat: no-repeat
+			image: url('../img/scoreboard.svg')
+		&.corner
+			background-position: 0 1px
+		&.yellow-card
+			background-position: -1px -29px
+		&.red-card
+			background-position: 0 -59px
+		&.arrow
+			width: 19px
+			height: 18px
+			background-position: 0 -88px
+		&.free-kick
+			width: 20px
+			height: 20px
+			background-position: 0 -115px
+		&.goalkeeper-kick
+			width: 18px
+			height: 18px
+			background-position: 0 -147px
+		&.two-arrow
+			width: 20px
+			background-position: 0 -179px
+		&.goal
+			width: 20px
+			height: 16px
+			background-position: 0 -207px
+		&.penalty
+			width: 20px
+			height: 16px
+			background-position: 0 -237px
+	&-menu
+		background-color: #141414
+		padding: 10px
+		height: $base-height
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		*
+			color: #fff
+		& > *
+			&:nth-child(1)
+				width: 90%
+		&-wrapper
+			margin-right: auto
+		&-wrapper-text
+			max-width: 90%
+		&-link
+			margin-right: 10px
+			&:before
+				font-size: 18px
+		.scoreboard-icon
+			margin:
+				left: 0
+				right: 0
+
+		
+	&-toggle
+		position: absolute
+		left: 0
+		top: 100%
+		max-height: 200px
+		overflow-y: auto
+		z-index: 2
+		&.block
+			display: block
+		&.none
+			display: none
+		&-item
+			cursor: pointer
+			width: 100%
+			padding: 5px 10px
+			background-color: #556e75
+			border-bottom: 1px solid #405257
+			&:hover,
+			&.active
+				background-color: lighten(#556e75, 10%)
+				*
+					color: #fff
+			*
+				color: $m-white
+			.scoreboard-icon
+				margin:
+					left: 5px
+					right: 0

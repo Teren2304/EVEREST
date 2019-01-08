@@ -1,0 +1,224 @@
+.betslip
+	position: fixed
+	left: 50%
+	top: 50%
+	max-width: 480px
+	z-index: 10
+	transform: translate(-50%, -50%)
+	background-color: $fifth
+	width: calc(100% - 20px)
+	max-height: 100%
+	overflow-y: auto
+	&-link
+		min-width: 260px
+		max-width: 260px
+		background-color: $primary
+		position: fixed
+		left: 50%
+		bottom: 0
+		right: 0
+		padding: 5px 10px
+		z-index: 3
+		transform: translateX(-50%)
+		&.active
+			display: block
+		&.not-active
+			display: none
+		*
+			color: #fff
+		&-count
+			&:after
+				content: attr(data)
+				font-size: 11px
+				color: #000
+				background-color: #fff
+				border-radius: 100%
+				height: 15px
+				width: 15px
+				position: absolute
+				line-height: 1.4
+				text-align: center
+				margin-left: 5px
+	&-header
+		height: $base-height
+		background-color: $primary
+		padding: 2px 0 2px 5px
+		*
+			color: #fff
+		&-button
+			background-color: darken($primary, 10%)
+			padding: 0
+			margin-right: 1px
+			&:before
+				font-size: 20px
+			&.active
+				background-color: darken($primary, 5%)
+	&-remove
+		border-bottom: 1px solid lighten($fifth, 30%)
+		background-color: $third
+		padding: 5px
+		&-link
+			color: #fff
+			text-transform: uppercase
+		&-select
+			width: 70%
+			color: #fff
+			border: 1px solid lighten($fifth, 30%)
+			background:
+				color: $fifth
+				image: url(../img/select-arrow.png)
+	&-main
+		position: relative
+		padding: 2px
+		border-bottom: 2px solid $primary
+		&:last-child
+			border-bottom: 0
+		*
+			color: #fff
+		&-close
+			position: absolute
+			top: 0
+			left: 0
+			&.active
+				background-color: darken($primary, 5%)
+		&-text
+			margin:
+				left: auto
+				right: 5px
+				top: 3px
+		&-return
+			margin-right: 5px
+		&-block
+			padding: 3px 0
+			margin:
+				left: 45px
+				right: 10px
+			&:last-child
+				padding: 0
+				margin:
+					left: 0
+					right: 0
+				text-align: right
+		&-field
+			text-align: right
+			height: 30px
+			padding: 0 5px
+			background-color: $third
+			text-transform: uppercase
+			border: 0
+			max-width: 90px
+			&:focus
+				background-color: darken($third, 5%)
+			&::-webkit-input-placeholder
+				color: $d-white
+			&::-moz-placeholder
+				color: $d-white
+			&:-ms-input-placeholder
+				color: $d-white	
+			&::-o-input-placeholder
+				color: $d-white		
+	&-multiples
+		position: relative
+		height: $base-height
+		cursor: pointer
+		padding-left: 5px
+		&:before
+			font:
+				family: FontAwesome
+				size: 20px
+			color: #fff
+			position: absolute
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&.not-active:before
+			content: '\f107'
+		&.active:before
+			content: '\f106'
+		*
+			color: #fff
+		&-single
+			border-top: 1px solid #a2b1b6
+			background-color: $third
+			padding: 5px
+			*
+				color: #fff
+		&-text
+			margin-right: auto
+		&-field
+			color: #fff
+			border: 1px solid #a2b1b6
+			background-color: #556e75
+
+
+.betslip-small
+	max-height: 100%
+	max-width: 550px
+	width: 100%
+	overflow-y: auto
+	box-shadow: 0 -5px 40px 0 rgba(0, 0, 0, 0.75)
+	position: fixed
+	left: 50%
+	bottom: 0
+	z-index: 10
+	transform: translateX(-50%)
+	background-color: $third
+	&-keyboard
+		.keyboard-button
+			height: 35px
+			line-height: 1
+	&-info
+		height: 60px
+		padding-left: 10px
+		*
+			line-height: 1.2
+			color: #fff
+			&:first-child
+				font-size: 18px
+	&-close
+		margin-left: 10px
+		min-height: 60px
+		min-width: 60px
+		max-height: 60px
+		max-width: 60px
+	&-rate,
+	&-placebet
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 50%
+		height: 50px
+		padding: 
+			left: 10px
+			right: 10px
+		*
+			line-height: 1.2
+			color: #fff
+	&-rate
+		background-color: $second
+	&-placebet
+		align-items: center
+		background-color: $fourth
+	&-button-add,
+	&-button-done
+		width: 50%
+		color: #fff
+		text-transform: uppercase
+	
+	&-button-done
+		background-color: $primary
+		&.active
+			background-color: darken($primary, 10%)
+	&-button-add
+		background-color: darken($primary, 15%)
+		&.active
+			background-color: darken($primary, 20%)
+	&-footer
+		height: $base-height
+		background-color: darken($primary, 25%)
+		padding: 
+			left: 10px
+			right: 10px
+		*
+			color: #fff
+			text-transform: uppercase

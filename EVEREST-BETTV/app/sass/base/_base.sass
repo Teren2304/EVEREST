@@ -1,0 +1,123 @@
+$grey: #9D9D9D
+$white: #fff
+$black: #000
+$dark: lighten(#000, 10%)
+$orange: orange
+$red: red
+
+$font-color: ('grey': $grey, 'white': $white, 'black': $black, 'dark': $dark, 'orange': $orange, 'red': $red, 'yellow': lighten(yellow, 40%))
+$font-size: ('xxs': 10px, 'xs': 12px, 'lg': 16px)
+$font-weight: ('light': 300, 'normal': 400, 'bold': 600)
+.font
+	@each $status, $text-color in $font-color
+		&--#{$status}
+			color: $text-color
+	@each $status, $text-weight in $font-weight
+		&--#{$status}
+			font-weight: $text-weight
+	@each $status, $text-size in $font-size
+		&--#{$status}
+			font-size: $text-size
+
+$border-color: #fff
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+	-webkit-appearance: none
+	appearance: none
+	margin: 0
+
+.container
+	max-width: $max-width
+	min-width: $min-width
+	margin: 0 auto
+
+.center-wrapper
+	display: flex
+	align-items: center
+	justify-content: center
+
+.flex
+	&-container
+		position: relative
+		display: flex
+	&-child-auto
+		flex: 1 1 auto
+	&-child-grow 
+		flex: 1 0 auto
+	&-child-shrink
+		flex: 0 1 auto
+	&-dir-row
+		flex-direction: row
+		flex-wrap: wrap
+	&-dir-row-reverse
+		flex-direction: row-reverse
+	&-dir-column
+		flex-direction: column
+	&-dir-column-reverse
+		flex-direction: column-reverse
+
+.align
+	&-right
+		justify-content: flex-end
+	&-center
+		justify-content: center
+	&-justify
+		justify-content: space-between
+	&-spaced
+		justify-content: space-around
+	&-top
+		align-items: flex-start
+	&-bottom
+		align-items: flex-end
+	&-middle
+		align-items: center
+	&-stretch
+		align-items: stretch
+	&-center-middle
+		justify-content: center
+		align-items: center
+		align-content: center
+	&-self-top
+		align-self: flex-start
+	&-self-bottom
+		align-self: flex-end
+	&-self-middle
+		align-self: center
+	&-self-stretch
+		align-self: stretch
+
+.text
+	&-left
+		text-align: left
+	&-right
+		text-align: right
+	&-center
+		text-align: center
+	&-justify
+		text-align: justify
+	&-uppercase
+		text-transform: uppercase
+	&-cursive
+		font-style: italic
+
+.overflow
+	&-hidden
+		overflow: hidden
+	&-visible
+		overflow: visible
+
+.input,
+.select
+	border: 1px solid $grey
+	height: 23px
+	padding: 0 10px
+	width: 100%
+	&:focus
+		border-color: #569de5
+
+.checkbox
+	appearance: checkbox
+	height: 15px
+	width: 15px
+	margin: 0

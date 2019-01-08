@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>TEST</title>
+</head>
+<body style="background-color: #9f9f9f;">
+<!--Modal-setup-->
+<div class="modal modal--block flex-container flex-dir-column align-justify" id="modal-setup">
+	<div>
+		<p class="font">Setup</p>
+		<p class="font font--light">Printer</p>
+		<select class="select">
+			<option value="1">Microsoft XPS Document Writer</option>
+			<option value="2">Microsoft Print to PDF</option>
+			<option value="3">Fax</option>
+			<option value="4">XML Printer</option>
+			<option value="5">XML Printer, Format 2</option>
+		</select>
+		<p class="font font--light">Ticket xml directory</p>
+		<input type="text" class="input">
+		<p class="font font--light">Generate Fiscal Xml</p>
+		<input type="checkbox" class="checkbox" id="setup-0"/>
+		<p class="font font--light">Fiscal xml directory</p>
+		<input type="text" class="input">
+		<ul>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-1"/>
+				<label for="setup-1" class="font font--light">Do not print lost ticket</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-2" checked/>
+				<label for="setup-2" class="font font--light">Allow reprint last ticket</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-3"/>
+				<label for="setup-3" class="font font--light">Print a copy of the ticket</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-4"/>
+				<label for="setup-4" class="font font--light">Print a copy of return</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-5"/>
+				<label for="setup-5" class="font font--light">Print a copy of the payout</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-6"/>
+				<label for="setup-6" class="font font--light">Print a signature row on the ticket</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-7" checked/>
+				<label for="setup-7" class="font font--light">Integrated view</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-8"/>
+				<label for="setup-8" class="font font--light">Integrated view chrome</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-9"/>
+				<label for="setup-9" class="font font--light">Start minimized</label>
+			</li>
+			<li class="flex-container align-middle">
+				<input type="checkbox" class="checkbox" id="setup-10"/>
+				<label for="setup-10" class="font font--light">Start when Windows starts</label>
+			</li>
+		</ul>
+	</div>
+	<div class="center-wrapper align-justify">
+		<button class="btn btn--default close-modal" modal-close="#modal-setup">
+			<span class="font font--light">Save</span>
+		</button>
+		<button class="btn btn--default close-modal" modal-close="#modal-setup">
+			<span class="font font--light">Cancel</span>
+		</button>
+	</div>
+</div>
+<!--END modal-setup-->
+</body>
+</html>

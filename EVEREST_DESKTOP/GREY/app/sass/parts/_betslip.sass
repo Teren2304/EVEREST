@@ -1,0 +1,200 @@
+.disable
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		bottom: 0
+		right: 0
+		z-index: 1
+		//background-color: hsla(0,0%,100%,.2)
+.enable
+	position: relative
+	z-index: 2
+	background-color: #292833
+
+.betslip
+	background-color: #04121a
+	padding: 10px 0	0 0
+	
+	.block
+		border: 1px solid transparent
+
+	$border-color: $primary
+	&-message,
+	&-information,
+	&-multiples,
+	&-main
+		background-color: #182025
+
+	&-live
+		background-color: $primary
+		padding: 2px 5px
+		border-radius: 5px
+		margin-right: 5px
+
+	&-message
+		text-align: center
+		padding: 10px
+		margin: 10px
+		&:first-child
+			margin-top: 0
+		.fa
+			position: relative
+			margin: 0 auto
+			height: 50px
+			width: 50px
+			border-radius: 50%
+			border: 4px solid $m-white
+			&:before
+				+absolute-center
+				color: $m-white
+				font-size: 28px
+
+	&-information
+		padding: 7px 10px 7px 15px
+		margin: 10px
+		&:last-child
+			margin-bottom: 0
+
+	&-multiples
+		padding: 10px
+		border-bottom: 1px solid $border-color
+		& > *
+			width: 33.3333%
+			&:first-child,
+			&:last-child
+				padding:
+					left: 10px
+					right: 10px
+		&-link
+			display: block
+			padding: 10px
+			position: relative
+			background-color: lighten(#04121a, 2%)
+			border-bottom: 1px solid $border-color
+			&:after
+				font:
+					family: FontAwesome
+					size: 20px
+				color: $m-white
+				+absolute-left
+				left: auto
+				margin-left: 7px
+			&.not-active
+				&:after
+					content: '\f105'
+			&.active
+				&:after
+					content: '\f106'
+
+	&-main
+		padding: 10px
+		max-width: 100%
+		position: relative
+		border-bottom: 1px solid $border-color
+		&.not-active
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				width: 3px
+				background-color: $second
+
+	&-footer
+		padding: 10px
+
+	&-line
+		position: relative
+		&:after
+			content: ""
+			height: 3px
+			width: 100%
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+		&.red
+			&:after
+				background-color: #c8304d
+		&.yellow
+			&:after
+				background-color: #ffef67
+		&.green
+			&:after
+				background-color: #03c503
+	
+	&-field
+		height: 28px
+		color: #fff
+		background-color: #181818
+		border: 1px solid $border-color
+		&.small
+			width: 70px
+
+	&-max
+		margin-top: 5px
+		display: inline-block
+		&:hover
+			color: #fff
+	&-count
+		min-width: 30px
+		&.red
+			border-bottom: 2px solid #c8304d
+		&.yellow
+			border-bottom: 2px solid #ffef67
+		&.green
+			border-bottom: 2px solid #03c503
+	&-block
+		min-width: 75%
+		max-width: 75%
+
+	&-close
+		z-index: 2
+		&:hover
+			&:before,
+			&:after
+				background-color: #fff
+
+	&-remove
+		background-color: lighten(#04121a, 2%)
+		padding: 10px
+		border-bottom: 1px solid $border-color
+		&:hover
+			*
+				color: #fff
+				&:after,
+				&:before
+					background-color: #fff
+		.close
+			max:
+				height: 15px
+				width: 15px
+			min:
+				height: 15px
+				width: 15px
+
+	&-button
+		background: #494949
+		background: linear-gradient(180deg, #494949 9%, #2a2a2a 57%)
+		color: #636363
+		border:
+			right: 1px solid black
+			bottom: 1px solid black
+			left: 1px solid #636363
+			top: 1px solid #636363
+		&.disable
+			cursor: auto
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				z-index: 2
+				background-color: rgba(0, 0, 0, 0.3)

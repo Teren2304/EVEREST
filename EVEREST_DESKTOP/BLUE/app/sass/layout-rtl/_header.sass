@@ -1,0 +1,68 @@
+.header
+	.top
+		background-color: #212121
+		&-wrapper
+			padding: 10px
+		&-menu
+			&-item
+				margin-right: 10px
+			&-dropdown
+				position: relative
+				padding-left: 20px
+				color: $primary
+				&:hover
+					color: #fff
+				&:after
+					color: #fff
+					font:
+						family: FontAwesome
+						size: 18px
+					+absolute-left
+				&.active
+					&:after
+						content: '\f106'
+				&.not-active
+					&:after
+						content: '\f107'
+	.nav
+		background-color: #fff
+		height: 100px
+		margin-bottom: 10px
+		& > *
+			height: 100%
+	.menu
+		&-item
+			padding: 10px
+			font-size: 20px
+			text-transform: uppercase
+			&:hover
+				color: $primary
+			&.active
+				background-color: $primary
+				color: #fff
+	.sign-in
+		&-wrapper
+			width: 130px
+			margin-left: 10px
+		&-field
+			background-color: #fff
+			border: 1px solid #bbbbbb
+		&-button
+			&:before
+				content: '\f105'
+				width: 20px
+				font:
+					family: FontAwesome
+					size: 20px
+		&-link
+			position: absolute
+			bottom: -20px
+			left: 0
+			font-size: 10px
+			text-transform: uppercase
+			white-space: nowrap
+			&:hover,
+			&.active
+				text-decoration: none
+	.bottom
+		display: none

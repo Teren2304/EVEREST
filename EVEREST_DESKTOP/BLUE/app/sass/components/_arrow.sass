@@ -1,0 +1,22 @@
+.up
+	&:before
+		color: #03c503
+		content: "\f0d8"
+.down
+	&:before
+		color: #ed1c24
+		content: "\f0d7"
+.up,
+.down
+	white-space: nowrap
+	&:before
+		transform: translate(0, -15%)
+		font:
+			family: FontAwesome
+			size: 1.2em
+		margin:
+			left: 5px
+			right: 3px
+.blick
+	&:before
+		animation: blick .7s linear 5

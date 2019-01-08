@@ -1,0 +1,71 @@
+.result-table
+	height: 72px
+	margin-bottom: 1px
+	&-wrapper
+		background-color: rgba(255,255,255,0.3)
+	&-left,
+	&-right
+		height: 100%
+	&-left
+		position: relative
+		z-index: 1
+		width: 45%
+		background-color: #341c2b
+		&:hover
+			cursor: pointer
+			.team-name,
+			.team-score
+				color: $primary
+		.team
+			&-name
+				color: #fff
+				font-size: 18px
+				text-align: center
+			&-score
+				margin: 0 10px
+				color: $primary
+				font-size: 28px
+			&-period,
+			&-time
+				color: #fff
+				font-size: 16px
+			&-button
+				margin: 5px
+			&-table
+				width: auto
+				*
+					padding: 1px 2px
+				.circle
+					background-color: yellow
+					height: 5px
+					width: 5px
+					border-radius: 100%
+	&-right
+		overflow: hidden
+		padding: 0 1px
+		width: 55%
+		background-color: #281420
+		display: flex
+		flex-direction: column
+		& > div
+			height: 50%
+		.button.reload
+			transform: rotate(180deg)
+		.button.coefficient
+			margin-right: 1px
+			&:last-child
+				justify-content: center
+				margin-right: 0
+				width: 50px
+				padding: 0 3px
+	&-menu
+		background-color: #fff
+		padding: 0 10px
+		height: $base-height
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		margin-bottom: 1px
+		.font
+			color: #000

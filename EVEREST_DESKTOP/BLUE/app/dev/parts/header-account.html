@@ -1,0 +1,56 @@
+<header class="header">
+	<div class="[ top ]">
+		<div class="container">
+			<div class="[ top-wrapper ] flex-container align-justify">
+				<p class="font white text-uppercase">18:00:00 GMT+2</p>
+				<div class="[ top-menu ] flex-container align-middle">
+					<a class="font l-white text-uppercase [ top-menu-item ]">Chat</a>
+					<a class="font l-white text-uppercase [ top-menu-item ]">Support</a>
+					<p class="font l-white text-uppercase [ top-menu-item ]">Language:</p>
+					<a class="font l-white text-uppercase [ top-menu-item top-menu-dropdown not-active ]">English</a>
+				</div>
+			</div>
+			<div class="[ languages not-active ] scroll">
+				{% for i in range(0, 40) %}
+					{% if i == 0 %}
+						<a href="#" class="font [ languages-link active ]">English {{ i }}</a>
+					{% else %}
+						<a href="#" class="font [ languages-link ]">English {{ i }}</a>
+					{% endif %}		
+				{%- endfor %}
+			</div>
+		</div>
+	</div>
+	<nav class="[ nav ] container-fluid">
+		<div class="container flex-container align-middle">
+			<div class="content left">
+				<a hre="#" class="[ logo ]"><img src="./img/logo.png" alt="Everest bet"></a>
+			</div>
+			<div class="content center">
+				<menu class="[ menu ] flex-container align-center-middle">
+					<a href="#" class="font [ menu-item active ]">Sports</a>
+					<a href="#" class="font [ menu-item ]">Pocker</a>
+					<a href="#" class="font [ menu-item ]">Casino</a>
+					<a href="#" class="font [ menu-item ]">Games</a>
+				</menu>
+			</div>
+			<div class="content wide">
+				<div class="[ login-in ] flex-container align-middle align-right">
+					<div class="block mr">
+						<a class="font title [ login-in-name ]">Vasya Pupkin</a>
+						<div class="flex-container align-right align-middle">
+							<a class="font [ login-in-price ] mr">4.36 Usd</a>
+							<a class="font [ login-in-deposit ]">Deposit</a>
+						</div>
+					</div>
+					<a class="[ login-in-img ]">
+						<img src="./img/user.png" alt="User">
+						<p class="[ login-in-circle ]">
+							<span class="font">21</span>
+						</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,29 @@
+.star
+	position: relative
+	min:
+		height: 30px
+		width: 30px
+	max:
+		height: 30px
+		width: 30px
+	cursor: pointer
+	border:
+		right: 1px solid black
+		bottom: 1px solid black
+		left: 1px solid #636363
+		top: 1px solid #636363
+		radius: 3px
+	background: $primary
+	background: linear-gradient(180deg, $primary 9%, #2a2a2a 57%)
+
+	&:before
+		content: '\f005'
+		font:
+			family: FontAwesome
+			size: 20px
+		color: #636363
+		z-index: 2
+		+absolute-center
+	&:hover
+		&:before
+			color: #fff

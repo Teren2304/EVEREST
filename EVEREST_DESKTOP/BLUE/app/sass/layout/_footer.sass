@@ -1,0 +1,84 @@
+.footer
+
+	
+	$padding-left-right: 10%
+
+	.partner,
+	.about,
+	.info,
+	.copyright
+		& > .container
+			padding: 30px 0
+
+	.partner
+		background-color: #556e75
+		&-wrapper
+			&:first-child
+				margin-left: $padding-left-right
+			&:last-child
+				margin-right: $padding-left-right
+		&-item
+			height: 80px
+			width: 80px
+			margin: 20px
+			border-radius: 100%
+			background-color: #fff
+	.about
+		&-item
+			height: 80px
+			width: 80px
+			margin: 20px
+			border-radius: 100%
+			background-color: #fff
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0			
+	.info
+		border:
+			top: 1px solid rgba(255, 255, 255, 0.4)
+			bottom: 1px solid rgba(255, 255, 255, 0.4)
+
+		&-list
+			margin-left: 40px
+			&:first-child
+				margin-left: $padding-left-right
+			&:last-child
+				margin:
+					left: auto
+					right: $padding-left-right
+		&-item
+			padding: 5px 0
+		&-link
+			&:hover
+				color: #fff
+
+
+		.phone
+			position: relative
+			min:
+				height: 35px
+				width: 35px
+			max:
+				height: 35px
+				width: 35px
+			border-radius: 100%
+			background-color: rgba(255, 255, 255, 0.4)
+			&:before
+				content: '\f095'
+				font:
+					family: FontAwesome
+					size: 20px
+				color: $base-background-color
+				+absolute-center
+	.copyright
+		.plus18
+			height: 45px
+			width: 45px
+			border-radius: 100%
+			border: 2px solid rgba(255, 255, 255, 0.4)
+			overflow: hidden
+			position: relative
+			margin-left: $padding-left-right
+			*
+				+absolute-center

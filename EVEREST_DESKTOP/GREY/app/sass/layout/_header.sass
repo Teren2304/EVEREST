@@ -1,0 +1,90 @@
+.header
+	.nav
+		background-color: #fff
+		height: 80px
+		background:
+			image: url(../img/header-bg.png)
+			repeat: no-repeat
+			size: cover
+		border-bottom: 1px solid #363636
+		& > *
+			height: 100%
+
+	.center,
+	.menu,
+	.menu-item
+		height: 100%
+	
+	
+
+
+	.menu
+		&-item
+			display: flex
+			align-items: center
+			position: relative
+			height: 100%
+			font-size: 18px
+			text-transform: uppercase
+			padding:
+				left: 20px
+				right: 20px
+			color: rgba(255,255,255,0.6)
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 1px
+				width: 2px
+				height: 100%
+				background: linear-gradient(90deg, #000 50%, #353535 0%)
+			&:after
+				width: 0
+			&:last-child
+				&:after
+					left: auto
+					right: 1px
+					width: 2px
+			&:hover,
+			&.active
+				color: #fff
+		&-small-header
+			width: 100%
+			position: absolute
+			&-item
+				color: $m-white
+				margin: 0 5px
+				font-size: 12px
+				&:hover,
+				&.active
+					color: #fff
+
+	.sign-in
+		&-wrapper
+			flex-grow: 1
+			margin-right: 10px
+		&-field
+			background: linear-gradient(180deg, #0c0c0c 58%, #171717 100%)
+		&-button
+			border:
+				right: 1px solid #754100
+				bottom: 1px solid #754100
+				left: 1px solid #ffab42
+				top: 1px solid #ffab42
+			background: #ff940f
+			background: linear-gradient(180deg, #ff940f 31%, #be5a06 85%)
+			&:before
+				content: '\f105'
+				font:
+					family: FontAwesome
+					size: 20px
+				color: #fff
+		&-link
+			color: $m-white
+			margin-top: 5px
+			font-size: 12px
+			position: absolute
+			&:hover
+				color: $second

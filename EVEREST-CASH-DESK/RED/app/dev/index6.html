@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/sports-icon.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>Everest</title>
+</head>
+<body>
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+<div class="main">
+	<div class="container flex-container">
+		<div class="content center">
+			<div class="[ reports ]">
+				<div class="[ reports-header ]">
+					<div class="[ tab-header ] flex-container align-middle">
+						<a class="[ tab-link active ] font" data="#tab-body-1">Shift</a>
+						<a class="[ tab-link ] font" data="#tab-body-2">Sports</a>
+						<a class="[ tab-link ] font" data="#tab-body-3">Sports</a>
+					</div>
+				</div>
+				<div class="tab-body [ reports-tab-body active ]" id="tab-body-1">
+					<div class="[ reports-body ]" style="width: 100%">
+						<div class="[ tab-body ]">
+							<div class="table [ reports-table ]">
+								<div class="row">
+									<div class="cell">Date</div>
+									<div class="cell">Operation</div>
+									<div class="cell">Description</div>
+									<div class="cell">Amount</div>
+									<div class="cell">Balance</div>
+								</div>
+								{% for i in range(0, 10) %}
+									<div class="row">
+										<div class="cell"><p class="font">21.07.2018 01:09:4{{i}}</p></div>
+										<div class="cell"><p class="font">Bet placed</p></div>
+										<div class="cell"><a class="font text-underline">Betslip № 10100{{i}}</a></div>
+										<div class="cell"><p class="font">2{{i}}</p></div>
+										<div class="cell"><p class="font">503{{i}}</p></div>
+									</div>
+								{%- endfor %}
+								<div class="row">
+									<div class="cell">
+										<p class="font mr">Total: </p>
+										<p class="font bold">37.00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-body [ reports-tab-body ]" id="tab-body-2">
+					<div class="[ reports-body ]" style="width: 100%">
+						<div class="[ tab-body ]">
+							<div class="table [ reports-table big ]">
+								<div class="row">
+									<div class="cell">Info</div>
+									<div class="cell">Selection</div>
+									<div class="cell">Result Odds</div>
+									<div class="cell">Odds</div>
+									<div class="cell">Amount</div>
+									<div class="cell">Payout</div>
+									<div class="cell">Status</div>
+								</div>
+								{% for i in range(0, 10) %}
+									<div class="row">
+										<div class="cell">
+											<div>
+												<a class="font">10100{{i}}</a>
+												<p class="font">Soccer</p>
+												<p class="font">21.07.2018</p>
+												<p class="font">01:09:40</p>
+												<div class="[ reports-live ]"></div>
+											</div>
+										</div>
+										<div class="cell">
+											<div>
+												<p class="font">New Amsterdam United (-1.5) Asian handicap</p>
+												<p class="font bold">Anns Grove — New Amsterdam United</p>
+												<p class="font">Guyana Elite League</p>
+												<p class="font">21.07.2018 02:55</p>
+											</div>
+										</div>
+										<div class="cell"></div>
+										<div class="cell">
+											<p class="font mr">1.2{{i}}</p>
+											<div class="[ reports-dropdown ]">
+												<p class="font">2</p>
+											</div>
+										</div>
+										<div class="cell"><p class="font">2{{i}}</p></div>
+										<div class="cell"></div>
+										<div class="cell"><p class="font">Open</p></div>
+									</div>
+
+									<div class="toggle-table">
+										{% for i in range(0, 3) %}
+											<div class="row toggle">
+												<div class="cell">
+													<div>
+														<a class="font">Soccer</a>
+														<div class="[ reports-live ]"></div>
+													</div>
+												</div>
+												<div class="cell">
+													<div>
+														<p class="font">New Amsterdam United (-1.5) Asian handicap</p>
+														<p class="font bold">Anns Grove — New Amsterdam United</p>
+														<p class="font">Guyana Elite League</p>
+														<p class="font">21.07.2018 02:55</p>
+													</div>
+												</div>
+												<div class="cell"></div>
+												<div class="cell">
+													<p class="font mr">1.2{{i}}</p>
+												</div>
+												<div class="cell"><p class="font">2{{i}}</p></div>
+												<div class="cell"></div>
+												<div class="cell"><p class="font">В игре</p></div>
+											</div>
+										{%- endfor %}
+										<a class="font text-underline toggle-table-close">Close</a>
+									</div>
+
+								{%- endfor %}
+								<div class="row">
+									<div class="cell">
+										<p class="font mr">Total: </p>
+										<p class="font bold">37.00</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-body [ reports-tab-body ]" id="tab-body-3">
+					<div class="[ reports-body ]" style="width: 100%">
+						<div class="[ tab-body ]">
+							<div class="table [ reports-table big ]">
+								<div class="row">
+									<div class="cell">Info</div>
+									<div class="cell">Selection</div>
+									<div class="cell">Result Odds</div>
+									<div class="cell">Odds</div>
+									<div class="cell">Amount</div>
+									<div class="cell">Payout</div>
+									<div class="cell">Status</div>
+								</div>
+								{% for i in range(0, 1) %}
+									<div class="row">
+										<div class="cell">
+											<div>
+												<a class="font">10100{{i}}</a>
+												<p class="font">Soccer</p>
+												<p class="font">21.07.2018</p>
+												<p class="font">01:09:40</p>
+											</div>
+										</div>
+										<div class="cell">
+											<div>
+												<p class="font">New Amsterdam United (-1.5) Asian handicap</p>
+												<p class="font bold">Anns Grove — New Amsterdam United</p>
+												<p class="font">Guyana Elite League</p>
+												<p class="font">21.07.2018 02:55</p>
+											</div>
+										</div>
+										<div class="cell"></div>
+										<div class="cell">
+											<p class="font">1.2{{i}}</p>
+										</div>
+										<div class="cell"><p class="font">2{{i}}</p></div>
+										<div class="cell"></div>
+										<div class="cell"><p class="font">Open</p></div>
+									</div>
+
+									<div class="toggle-table active padding margin">
+										{% for i in range(0, 3) %}
+											<div class="row toggle border">
+												<div class="cell">
+													<div>
+														<a class="font">Soccer</a>
+														<div class="[ reports-live ]"></div>
+													</div>
+												</div>
+												<div class="cell">
+													<div>
+														<p class="font">New Amsterdam United (-1.5) Asian handicap</p>
+														<p class="font bold">Anns Grove — New Amsterdam United</p>
+														<p class="font">Guyana Elite League</p>
+														<p class="font">21.07.2018 02:55</p>
+													</div>
+												</div>
+												<div class="cell"></div>
+												<div class="cell">
+													<p class="font mr">1.2{{i}}</p>
+												</div>
+												<div class="cell"><p class="font">2{{i}}</p></div>
+												<div class="cell"></div>
+												<div class="cell"><p class="font">В игре</p></div>
+											</div>
+										{%- endfor %}
+									</div>
+								{%- endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="[ reports-footer ] flex-container align-middle align-justify">
+						<button class="button primary [ players-button disabled ]">Cancel bet</button>
+						<button class="button primary [ players-button ]">Payout</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.monitoring
+	&-category
+		background-color: #141414
+		height: $base-height
+		padding: 0 10px
+		*
+			color: #fff
+	&-body
+		display: flex
+		align-items: flex-start
+
+	&-table
+		background-color: transparent!important
+		width: auto
+		text-align: center
+		border:
+			collapse: unset
+			spacing: 2px
+		margin:
+			bottom: 10px
+			left: 10px
+		.row
+			width: 100%
+			display: table-row
+			&:first-child
+				.cell
+					background-color: #485158
+		.cell
+			display: table-cell
+			padding: 10px
+			min-width: 60px
+			height: $base-height
+			background-color: #556e75
+			*
+				color: #fff
+			&.primary
+				*
+					color: yellow
+	&-part
+		color: $primary

@@ -1,0 +1,134 @@
+.setting
+	margin-bottom: 10px
+	background-color: $third
+	&-nav
+		position: relative
+		height: 45px
+		&:after
+			content: ""
+			position: absolute
+			height: 2px
+			width: 100%
+			left: 0
+			bottom: 0
+			right: 0
+			background-color: $primary
+
+		&-link
+			display: flex
+			align-items: center
+			justify-content: center
+			flex:
+				direction: row
+				wrap: nowrap
+			padding: 10px
+			height: 100%
+			width: 50%
+			margin-right: 1px
+			color: rgba(255, 255, 255, 0.5)
+			background-color: #2cb4de
+			&.active,
+			&:hover
+				background-color: $primary
+				*
+					color: #fff
+
+			&.small
+				width: auto
+	&-box
+		&.primary
+			margin-top: 10px
+		&.second
+			padding: 10px
+			background-color: $third
+		&.third
+			margin-top: 10px
+			padding: 0
+			background-color: $third
+
+	&-table
+		width: 100%
+		display: table
+		border:
+			collapse: unset
+			spacing: 2px
+		*
+			color: #fff
+		& > .row
+			display: table-row
+			width: 100%
+			& > .cell
+				display: table-cell
+				width: auto
+				vertical-align: bottom
+				& > .flex-container
+					height: $base-height
+					position: relative
+					&.primary
+						background-color: $fifth
+					&.second
+						background-color: $fourth
+					&.third
+						background-color: #fff
+				.flex-container.align-middle.align-right.second
+					justify-content: flex-end
+				
+	&-field,
+	&-select
+		color: #fff
+		border: 1px solid #a2b1b6
+		background-color: #45585e
+	&-select
+		background-image: url(../img/select-arrow.png)
+
+	&-category
+		background-color: $primary
+		height: $base-height
+		padding: 5px 10px
+		*
+			color: #fff
+	&-wrapper
+		margin: 5px 0
+		min-height: $base-height
+		position: relative
+		flex-wrap: wrap
+		padding: 20px 10px
+		&.no-wrap
+			flex-wrap: nowrap
+		*
+			color: #fff
+		& > div
+			margin: 5px 0
+		& > .flex-container
+				position: relative
+				padding-left: $base-height
+				& > .flex-container
+					padding-left: $base-height
+		&-text
+			min-width: 100px
+			max-width: 100px
+		&-button
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+		&-label
+			margin:
+				right: 5px
+				left: 15px
+
+		&-transaction
+			padding: 10px
+			height: 150px
+			background-color: #5e696d
+			border-top: 1px solid #789198
+
+		
+		.change-password
+			margin-right: 105px
+		.button
+			flex-direction: row-reverse
+			*
+				margin-right: 5px
+				&:last-child
+					margin-right: 0

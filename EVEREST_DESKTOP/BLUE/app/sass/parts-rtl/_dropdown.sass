@@ -1,0 +1,59 @@
+.dropdown
+	position: relative
+	&-link
+		padding: 10px 10px 10px 30px
+		background-color: #1cbff4
+		height: $base-height
+		position: relative
+		margin-bottom: 10px
+		&:before
+			content: ""
+			font:
+				family: FontAwesome
+				size: 20px
+			color: #fff
+			position: absolute
+			left: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover
+			background-color: $primary
+		&.not-active
+			&:before
+				content: '\f107'
+		&.active
+			background-color: $primary
+			&:before
+				content: '\f106'
+		*
+			color: #fff
+
+	&-block
+		position: absolute
+		z-index: 3
+		left: 0
+		top: 100%
+		width: 100%
+		height: auto
+		max-height: 300px
+		background-color: $primary
+		&.not-active
+			display: none
+		&.active
+			display: block
+
+
+	&-items
+		background-color: darken($primary, 5%)
+		height: $base-height
+		padding: 10px
+		margin-bottom: 1px
+		position: relative
+		*
+			color: $m-white
+		&:hover,
+		&.active
+			background-color: $primary
+			*
+				color: #fff
+		

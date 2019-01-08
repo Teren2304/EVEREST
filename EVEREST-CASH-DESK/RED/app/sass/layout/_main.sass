@@ -1,0 +1,14 @@
+$padding-top: 110px
+.main
+	padding-top: $padding-top
+	.left
+		&-wrapper
+			width: 260px
+			float: left
+			position: fixed
+			height: calc(100% - #{$padding-top})
+			overflow:
+				y: auto
+				x: hidden
+			.tab-header
+				margin-bottom: 10px

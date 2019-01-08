@@ -1,0 +1,59 @@
+.events
+	position: relative
+	
+	&-dropdown
+		max-height: 200px
+		overflow:
+			y: auto
+			x: hidden
+		left: 0
+		right: 0
+		top: calc(100% + 5px)
+		z-index: 1
+		position: absolute
+		background-color: #000
+		&.active
+			display: block
+		&.not-active
+			display: none
+		&-list
+			background-color: $second
+			cursor: pointer
+			padding: 0 10px
+			height: $base-height
+			margin-bottom: 1px
+			&:hover,
+			&.active
+				background-color: darken($second, 3%)
+			*
+				color: #fff
+				white-space: nowrap
+				margin-right: 5px
+				&:last-child
+					margin-right: 0
+	&-wrapper
+		margin-top: 10px
+
+	&-list
+		border: 1px solid #4e2d41
+		background-color: #20101a
+		margin: 5px 0
+		*
+			color: #fff
+		&-id,
+		&-sport,
+		&-league,
+		&-name,
+		&-date
+			padding: 5px 10px
+
+		&-id
+			width: 100px
+		&-sport
+			width: 15%
+		&-league
+			width: 35%
+		&-name
+			width: 40%
+		&-date
+			width: 100px

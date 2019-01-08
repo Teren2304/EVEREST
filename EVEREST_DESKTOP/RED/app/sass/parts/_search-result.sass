@@ -1,0 +1,60 @@
+.search-result
+	position: absolute
+	z-index: 9
+	padding: 20px
+	right: 0
+	top: 60px
+	min-width: 700px
+	max-width: 900px
+	background-color: #07222d
+	&:after
+		content: ''
+		position: absolute
+		height: 30px
+		width: 30px
+		background-color: #07222d
+		transform: rotate(45deg)
+		top: -15px
+		right: 100px
+	&.active
+		display: block
+	&.not-active
+		display: none
+	&-close
+		margin:
+			right: 0
+			left: auto
+	&-more
+		margin-top: 10px
+		text-align: right
+		cursor: pointer
+		*
+			color: #fff
+	&-title
+		color: #fff
+		margin-bottom: 10px
+		*
+			color: $primary
+	&-table
+		max-height: 300px
+		overflow:
+			x: hidden
+			y: auto
+	.table
+		background-color: darken(#281420, 5%)
+		&-category
+			background-color: rgba(255,255,255,0.99)
+			&:before
+				color: #000
+			&:hover
+				background-color: rgba(255,255,255,1)
+		&-cell
+			background-color: #281420
+			flex-grow: 1
+			*
+				color: #fff
+			&:nth-child(1)
+				padding: 0 5px
+		.coefficient
+			.ellipsis
+				margin-right: auto

@@ -1,0 +1,99 @@
+<header class="header">
+	<div class="[ top ] container-fluid">
+		<div class="container">
+			<div class="[ top-wrapper ] flex-container align-justify">
+				<p class="font white text-uppercase">18:00:00 GMT+2</p>
+				<div class="[ top-menu ] flex-container align-middle">
+					<a class="font l-white text-uppercase [ top-menu-item ]">Chat</a>
+					<a class="font l-white text-uppercase [ top-menu-item ]">Support</a>
+					<p class="font l-white text-uppercase [ top-menu-item ]">Language:</p>
+					<a class="font l-white text-uppercase [ top-menu-item top-menu-dropdown not-active ]">English</a>
+				</div>
+			</div>
+			<div class="[ languages not-active ] scroll">
+				{% for i in range(0, 40) %}
+				{% if i == 0 %}
+					<a href="#" class="font [ languages-link active ]">English {{ i }}</a>
+				{% else %}
+					<a href="#" class="font [ languages-link ]">English {{ i }}</a>
+				{% endif %}		
+				{%- endfor %}	
+			</div>
+		</div>
+	</div>
+	<nav class="[ nav ] container-fluid">
+		<div class="container flex-container align-middle">
+			<div class="content left">
+				<a hre="#" class="[ logo ]"><img src="./img/logo.png" alt="Everest bet"></a>
+			</div>
+			<div class="content center">
+				<menu class="[ menu ] flex-container align-center-middle">
+					<a href="#" class="font [ menu-item active ]">Sports</a>
+					<a href="#" class="font [ menu-item ]">Pocker</a>
+					<a href="#" class="font [ menu-item ]">Casino</a>
+					<a href="#" class="font [ menu-item ]">Games</a>
+				</menu>
+			</div>
+			<div class="content right">
+				<div class="[ sign-in ] flex-container align-right">
+					<div class="block [ sign-in-wrapper ]">
+						<input type="text" class="field [ sign-in-field ]" placeholder="Login">
+						<a class="font text-underline [ sign-in-link ]">Register now!</a>
+					</div>
+					<div class="block [ sign-in-wrapper ]">
+						<input type="text" class="field [ sign-in-field ]" placeholder="Password">
+						<a class="font text-underline [ sign-in-link ]">Forgotten password!</a>
+					</div>
+					<div class="block">
+						<button class="button primary square [ sign-in-button ]"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="[ bottom ] container-fluid">
+		<div class="container">
+			<div class="flex-container align-middle align-justify">
+				<menu class="[ bottom-menu ] flex-container align-middle">
+					<a class="font [ bottom-menu-item active ]">Sports betting</a>
+					<a class="font [ bottom-menu-item ]">Live betting</a>
+					<a class="font [ bottom-menu-item ]">Horse racing</a>
+					<a class="font [ bottom-menu-item ]">Video</a>
+					<a class="font [ bottom-menu-item ]">Mobile</a>
+				</menu>
+				<menu class="[ bottom-menu-link ] flex-container align-middle">
+					<a class="[ bottom-menu-link-item ]">
+						<span class="fa fa-list"></span>
+						<span class="fa fa-caret-down" style="color: #c8304d"></span>
+					</a>
+					<a class="[ bottom-menu-link-item ]">
+						<span class="fa fa-volume-up"></span>
+					</a>
+					<a class="[ bottom-menu-link-item ]">
+						<span class="fa fa-cogs"></span>
+					</a>
+					<div class="[ bottom-menu-link-item ]">
+						<span class="font m-white">Language</span>
+						<a class="font white">
+							<span>English</span>
+							<span class="fa fa-angle-down"></span>
+						</a>
+					</div>
+					<a class="[ bottom-menu-link-item last ]">
+						<span class="fa fa-calendar"></span>
+						<span class="font ml">15:01:13 GTM +2</span>
+					</a>
+					<div class="[ languages not-active ] scroll">
+						{% for i in range(0, 40) %}
+						{% if i == 0 %}
+							<a href="#" class="font [ languages-link active ]">English {{ i }}</a>
+						{% else %}
+							<a href="#" class="font [ languages-link ]">English {{ i }}</a>
+						{% endif %}		
+						{%- endfor %}
+					</div>
+				</menu>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,234 @@
+{% include "parts/head.html" %}
+<body>
+<div class="blur none">
+{% include "parts/header.html" %}
+<div class="main">
+	<div class="container flex-container" style="margin-bottom: 10px;">
+		<div class="content left">
+			{% include "parts/event.html" %}
+		</div>
+		<div class="content center">
+			{% include "parts/hot.html" %}
+		</div>
+	</div>
+	<div class="container flex-container" style="margin-bottom: 10px;">
+		<div class="content left">
+			{% include "side/left.html" %}
+		</div>
+		<div class="content center">	
+			<div class="[ live-now-wrapper ] flex-container align-middle">
+				{% for i in range(5, 20) %}
+				<div class="[ live-now ] flex-container">
+					<div class="[ live-now-left ] background" style="background-image: url('./img/banner/small/1.png');">
+					</div>
+					<div class="[ live-now-right ]">
+						<div class="flex-container align-middle [ live-now-right-text ]">
+							<p class="font mr ellipsis">England Premier League Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga earum reprehenderit voluptates culpa vero maiores ut at magni delectus aliquid nemo architecto, animi debitis fugiat commodi assumenda eaque beatae.</p>
+							<p class="font text-uppercase">Live</p>
+						</div>
+						<div class="flex-container align-middle [ live-now-right-text ]">
+							<p class="font mr ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit repellendus quod omnis accusantium magnam corrupti, voluptates itaque eligendi quasi magni voluptatibus voluptatem officia ex inventore mollitia totam aliquam ducimus. Suscipit.Everton vs Manchester City</p>
+							<p class="font primary lg">0-0</p>
+						</div>
+						<div class="block [ live-now-right-button ]">
+							<button class="button coefficient">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font">3.70</p>
+							</button>
+							<button class="button coefficient">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font">3.70</p>
+							</button>
+							<button class="button coefficient">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font">3.70</p>
+							</button>
+						</div>
+					</div>
+				</div>
+				{%- endfor %}
+			</div>
+			<div class="[ news ] flex-container align-middle" style="margin-top: 10px">
+				<button class="button primary fa fa-angle-left slider-prev"></button>
+				<div class="[ news-wrapper ] flex-container align-middle">
+					{% for i in range(1, 5) %}
+					<div class="[ news-item ] banner background" style="background-image: url(./img/news/news_{{ i }}.png);">
+						<div class="banner-shadow bottom">
+							<div class="flex-container align-top">
+								<p class="font small mr" data="15/04 at 18:00">Pep Guardiola claims he was offered Paul Pogba this season by Mino Raiola</p>
+								<button class="button primary square fa fa-angle-right"></button>
+							</div>
+						</div>
+					</div>
+					{%- endfor %}
+				</div>
+				<button class="button primary fa fa-angle-right slider-next"></button>
+			</div>
+			<div class="[ live-play ]" style="margin-top: 10px;">
+				<div class="[ live-play-category closed ] flex-container align-middle">
+					<p class="fa fa-bar-chart mr"></p>
+					<p class="font">Top bets</p>
+				</div>
+				<div class="[ live-play-header ] flex-container align-middle">
+					<a class="[ live-play-header-link active ]">
+						<span class="sports-4 mr"></span>
+						<span class="font">Football</span>
+					</a>
+					<a class="[ live-play-header-link ]">
+						<span class="sports-88 mr"></span>
+						<span class="font">Tennis</span>
+					</a>
+				</div>
+				<div class="table">
+					{% for i in range(1, 10) %}
+					<div class="row">
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<p class="font ellipsis">02:45 PM 3/16</p>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="star"></p>
+									<p class="font ellipsis mra">FC Rouen</p>
+									<p class="font">3.70</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="font ellipsis mra">X</p>
+									<p class="font">3.70</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="star"></p>
+									<p class="font ellipsis mra">FC Rouen</p>
+									<p class="font">3.70</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="font">+170</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button primary square fa fa-bar-chart"></button>
+							</div>
+						</div>
+					</div>
+					{%- endfor %}
+				</div>
+				<div class="[ live-play-menu ] flex-container align-middle">
+					<a href="#" class="[ live-play-menu-link ] font">Premier League</a>
+					<a href="#" class="[ live-play-menu-link ] font">Bundesliga</a>
+					<a href="#" class="[ live-play-menu-link ] font">Seria A</a>
+				</div>
+			</div>
+			<div class="[ live-play ]" style="margin-top: 10px;">
+				<div class="[ live-play-category closed ] flex-container align-middle">
+					<p class="fa fa-bar-chart mr"></p>
+					<p class="font">HIGLIGHTS UKRAINE</p>
+				</div>
+				<div class="[ live-play-header ] flex-container align-middle">
+					<a class="[ live-play-header-link active ]">
+						<span class="sports-4 mr"></span>
+						<span class="font">Football</span>
+					</a>
+					<a class="[ live-play-header-link ]">
+						<span class="sports-88 mr"></span>
+						<span class="font">Tennis</span>
+					</a>
+					<a class="[ live-play-header-link ]">
+						<span class="sports-4 mr"></span>
+						<span class="font">Football</span>
+					</a>
+					<a class="[ live-play-header-link ]">
+						<span class="sports-88 mr"></span>
+						<span class="font">Tennis</span>
+					</a>
+				</div>
+				<div class="table">
+					{% for i in range(1, 10) %}
+					<div class="row">
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<p class="font ellipsis">02:45 PM 3/16</p>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="star"></p>
+									<p class="font ellipsis mra">FC Rouen</p>
+									<p class="font">3.70</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="font ellipsis mra">X</p>
+									<p class="font">3.70</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="star"></p>
+									<p class="font ellipsis mra">FC Rouen</p>
+									<p class="font">3.70</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button coefficient">
+									<p class="font">+170</p>
+								</button>
+							</div>
+						</div>
+						<div class="cell">
+							<div class="flex-container align-center-middle">
+								<button class="button primary square fa fa-bar-chart"></button>
+							</div>
+						</div>
+					</div>
+					{%- endfor %}
+				</div>
+				<div class="[ live-play-menu ] flex-container align-middle">
+					<a href="#" class="[ live-play-menu-link ] font">Premier League</a>
+				</div>
+			</div>
+			<div class="[ live-play-category primary closed ] flex-container align-middle margin">
+				<p class="fa fa-bar-chart mr"></p>
+				<p class="font">Top bets</p>
+			</div>
+			<div class="block text">
+				<p class="font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quae vel explicabo, porro quam incidunt magnam laborum eveniet aspernatur, inventore dignissimos adipisci placeat aliquam. Rerum dolore deserunt porro vitae, dicta!</p>
+			</div>	
+		</div>
+		<div class="content wide">
+			{% include "side/right.html" %}
+		</div>
+	</div>
+</div>
+{% include "parts/footer.html" %}
+</div>
+{% include "parts/sign-up.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

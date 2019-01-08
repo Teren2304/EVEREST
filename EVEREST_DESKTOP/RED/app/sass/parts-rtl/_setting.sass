@@ -1,0 +1,139 @@
+.setting
+	margin-bottom: 10px
+	background-color: #281420
+	&-nav
+		position: relative
+		height: 50px
+		&:after
+			content: ""
+			position: absolute
+			height: 2px
+			width: 100%
+			left: 0
+			bottom: 0
+			right: 0
+			background-color: $primary
+
+		&-link
+			display: flex
+			align-items: center
+			justify-content: center
+			flex:
+				direction: row
+				wrap: nowrap
+			padding: 10px
+			height: 100%
+			width: 50%
+			margin-left: 1px
+			color: rgba(255, 255, 255, 0.5)
+			background-color: darken($primary, 10%)
+			&:last-child
+				margin-left: 0
+			&.active,
+			&:hover
+				background-color: $primary
+				*
+					color: #fff
+
+			&.small
+				width: auto
+	&-box
+		&.primary
+			padding: 10px
+			margin-top: 10px
+			.setting-nav
+				height: 40px
+		&.second
+			padding: 10px 0
+			background-color: #281420
+		&.third
+			margin-top: 10px
+			padding: 0
+			background-color: #281420
+
+	&-table
+		background-color: #281420!important
+		width: 100%
+		display: table
+		border:
+			collapse: unset
+			spacing: 2px
+		*
+			color: #fff
+		& > .row
+			display: table-row
+			width: 100%
+			& > .cell
+				display: table-cell
+				width: auto
+				vertical-align: bottom
+				& > .flex-container
+					height: $base-height
+					position: relative
+					padding: 5px
+					&.primary
+						background-color: #343341
+					&.second
+						background-color: #33202b
+					&.third
+						background-color: #fff
+
+				.flex-container.align-middle.align-right.second
+					justify-content: flex-end
+	&-field,
+	&-select
+		color: #fff
+		border: 1px solid #4e2d41
+		background-color: #20101a
+	&-select
+		background-image: url(../img/select-arrow.png)
+
+	&-category
+		background-color: $primary
+		height: $base-height
+		padding: 5px 10px
+		*
+			color: #fff
+	&-wrapper
+		margin: 5px 0
+		min-height: $base-height
+		position: relative
+		flex-wrap: wrap
+		padding: 20px 10px
+		&.no-wrap
+			flex-wrap: nowrap
+		*
+			color: #fff
+		& > div
+			margin: 5px 0
+		& > .flex-container
+				position: relative
+				padding-left: $base-height
+				& > .flex-container
+					padding-left: $base-height
+		&-text
+			min-width: 100px
+			max-width: 100px
+		&-button
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+		&-label
+			margin:
+				right: 5px
+				left: 15px
+
+		&-transaction
+			padding: 10px
+			height: 150px
+			background-color: #20101a
+			border-top: 1px solid #4e2d41
+	.change-password
+		margin-right: 105px
+	.button
+		flex-direction: row-reverse
+		*
+			margin-right: 5px
+			&:last-child
+				margin-right: 0

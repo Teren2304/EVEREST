@@ -1,0 +1,141 @@
+.service
+	&-tab-body
+		display: none
+		&.active
+			display: block
+		&.not-active
+			display: none
+
+	&-wrapper
+		display: none
+		border: 1px solid transparent
+		width: 33.3333%
+		&.active
+			display: block
+		&.not-active
+			display: none
+	&-title
+		background-color: $second
+		height: $base-height
+		padding: 10px
+		*
+			color: #fff
+			text-transform: uppercase
+	&-time
+		margin-bottom: 10px
+	&-block
+		height: 300px
+		overflow:
+			y: auto
+			x: hidden
+	&-label
+		height: $base-height
+		display: flex
+		align-items: center
+		padding: 5px 10px
+		background-color: darken(#fff, 5%)
+		position: relative
+		margin-bottom: 1px
+		cursor: pointer
+		&:last-child
+			margin-bottom: 0
+		&:before
+			content: ""
+			position: absolute
+			font:
+				family: FontAwesome
+				size: 20px
+			color: #000
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover
+			background-color: #fff		
+		&.closed
+			&:hover
+				&:before
+					content: "\f105"
+		&.open
+			&:hover
+				&:before
+					content: "\f107"
+		*
+			color: #000
+			text-transform: uppercase
+			&:nth-child(2)
+				margin-left: 5px
+				font-size: 20px
+			&:nth-child(3)
+				margin-left: 5px
+				font-size: 18px
+	&-select,
+	&-field
+		color: #fff
+		border: 1px solid #4e2d41
+		background-color: #20101a
+	&-select
+		width: 120px
+		background-image: url(../img/select-arrow.png)
+	&-table
+		margin-top: 10px
+		width: 100%
+		.row
+			width: 100%
+			height: $base-height
+			margin-bottom: 1px
+			overflow: hidden
+			&:first-child
+				.cell
+					background-color: $second!important
+					text-transform: uppercase
+					color: #fff
+		.cell
+			height: 100%
+			overflow: hidden
+			justify-content: flex-start
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				margin-right: 1px
+				background-color: #fff
+				padding: 5px 10px
+				width: calc(100% / 4 - 10px)
+			&:nth-child(5)
+				width: 36px
+			&:last-child
+				margin-right: 0!important
+		&.small
+			.cell
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3)
+					margin-right: 1px
+					background-color: #fff
+					padding: 5px 10px
+					width: calc(100% / 3 - 12px)
+				&:nth-child(4)
+					padding: 0
+					width: 36px
+	&-button
+		width: 100px
+		&:first-child
+			margin-right: 5px
+		&:last-child
+			margin-left: 5px
+		&.disabled
+			background-color: darken($primary, 20%)
+			cursor: default
+			pointer-events: none	
+	&-header
+		border-bottom: 2px solid $primary
+		.tab-header
+			.tab-link
+				width: auto
+				flex-grow: 0
+	&-body
+		padding: 10px
+		background-color: #281420
+	&-footer
+		background-color: lighten(#281420, 5%)
+		padding: 10px

@@ -1,0 +1,18 @@
+<div class="[ tab-header border ] flex-container align-middle">
+	<a class="[ tab-link active ] font">Betslip</a>
+	<a class="[ tab-link ] font">My Bets</a>
+</div>
+<div class="dropdown">
+	<a class="[ dropdown-link not-active ] flex-container align-middle j-start">
+		<span class="sports-4"></span>
+		<span class="font white ellipsis ml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit animi, pariatur aspernatur necessitatibus ea modi, cupiditate veniam deleniti. Earum, eius voluptatem et ipsam incidunt tempora veniam, natus expedita nisi deleniti!</span>
+	</a>
+	<div class="[ dropdown-block not-active ] scroll">
+	{% for i in range(5, 20) %}
+		<a href="#" class="[ dropdown-items ] flex-container align-middle">
+			<span class="sports-{{ i }} mr"></span>
+			<span class="font ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta maiores nemo, aliquid! Officia voluptates sapiente saepe velit ad eaque, vitae, maxime inventore excepturi cupiditate tempore itaque eos? Sed, ullam sapiente.</span>
+		</a>
+	{%- endfor %}
+	</div>
+</div>

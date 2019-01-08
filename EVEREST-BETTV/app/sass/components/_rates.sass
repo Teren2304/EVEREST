@@ -1,0 +1,88 @@
+.rates
+	border: 1px solid $grey 
+	background-color: #fff
+	height: 100%
+	overflow:
+		y: scroll
+		x: hidden
+	&-stop
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			background-color: rgba(0,0,0,0.3)
+			z-index: 9
+		&:before
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			padding: 0 30px
+			transform: translateY(-50%)
+			text-align: center
+			color: #fff
+			font-size: 28px
+			z-index: 10
+		&--card
+			&:before
+				content: 'Пожайлуста подождите ставки не принимаються. Раздаються карти'
+		&--other
+			&:before
+				content: 'Ставки не принмаються, идет тираж'
+
+	&__container
+		margin: 1px
+		min-height: 36px
+		border: 1px solid transparent
+		&:hover,
+		&:active,
+		&--active
+			&:not(.rates__container--not-active)
+				background-color: #cbe8f6
+				border-color: #68bde5
+		&--not-active
+			position: relative
+			&:before
+				content: ''
+				left: 0
+				top: 0
+				bottom: 0
+				right: 0
+				position: absolute
+				background-color: rgba(255,255,255,0.5)
+				z-index: 1
+			.rates__cof,
+			.rates__btn
+				display: none
+	&__id,
+	&__name,
+	&__cof,
+	&__btn
+		font-weight: 300
+		//border: 1px solid red
+	
+
+	&__id,
+	&__cof
+		min-width: 10%
+		max-width: 10%
+		text-align: right
+		padding: 5px
+	&__btn
+		width: auto
+		padding: 5px 0
+		margin-right: 5px
+		font-size: 14px
+	&__name
+		padding: 5px
+		width: 100%
+
+.ellipsis
+	display: block
+	overflow: hidden
+	white-space: nowrap
+	max-width: 100%

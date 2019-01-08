@@ -1,0 +1,72 @@
+{% include "parts/head.html" %}
+<body>
+<div class="blur none">
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+<!-- Aside -->
+{% include "parts/aside.html" %}
+<!-- End Aside -->
+
+<div class="main">
+	<div class="container">	
+		<div class="[ video ]">
+			<div class="[ video-title not-active ] flex-container align-center-middle">
+				<button class="button square [ video-title-button ] fa fa-angle-left"></button>
+				<p class="font [ video-title-text ]"><span>VICENZA - TRIESTINA</span></p>
+			</div>
+			<div class="[ video-play ] flex-container align-middle align-justify">
+				<p class="flex-container align-middle">
+					<span class="[ video-play-square white ]"></span>
+					<span class="font">Vicenza</span>
+				</p>	
+				<p class="font title [ video-play-count ]">1:0</p>
+				<p class="flex-container align-middle">
+					<span class="font">Vicenza</span>
+					<span class="[ video-play-square red ]"></span>
+				</p>	
+			</div>
+			<div class="[ video-body ]"></div>
+		</div>
+		<div class="table [ coeficient-table ]">
+			{% for i in range(1, 4) %}
+				<div class="row info">
+					<div class="cell">
+						<p class="font">FULLTIME RESULT</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="cell w33">
+						<button class="button coefficient">
+							<span class="font m-white">1</span>
+							<span class="font">9.50</span>
+						</button>
+					</div>
+					<div class="cell w33">
+						<button class="button coefficient">
+							<span class="font m-white">x</span>
+							<span class="font">6.00</span>
+						</button>
+					</div>
+					<div class="cell w33">
+						<button class="button coefficient">
+							<span class="font m-white">2</span>
+							<span class="font">2.75</span>
+						</button>
+					</div>
+				</div>
+			{%- endfor %}
+			<div class="row info">
+				<div class="cell">
+					<p class="font">Trestina</p>
+					<p class="font">3.00</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{% include "parts/script.html" %}
+</body>
+</html>

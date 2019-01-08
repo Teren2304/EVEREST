@@ -1,0 +1,80 @@
+{% include "parts/head.html" %}
+<div class="blur none">
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+<!-- Aside -->
+{% include "parts/aside.html" %}
+<!-- End Aside -->
+<div class="main">
+	<!-- Slider -->
+	{% include "parts/slider.html" %}
+	<!-- End Slider -->
+		
+	<div class="container">
+		<div class="flex-container align-justify [ play-big ]">
+			<div class="block">
+				<p class="font m-white ellipsis">Spanin Primera Liga</p>
+				<p class="font white title ellipsis">Real Sociedad v Espanyol</p>
+			</div>
+			<div class="block">
+				<p class="font m-white ellipsis text-right">45:00</p>
+				<p class="font white title ellipsis text-right">1-0</p>
+			</div>
+		</div>
+
+		<div class="table [ coeficient-table ]">
+			<div class="row">
+				<div class="cell w33">
+					<button class="button coefficient">
+						<span class="font m-white">1</span>
+						<span class="font">9.50</span>
+					</button>
+				</div>
+				<div class="cell w33">
+					<button class="button coefficient">
+						<span class="font m-white">x</span>
+						<span class="font">6.00</span>
+					</button>
+				</div>
+				<div class="cell w33">
+					<button class="button coefficient">
+						<span class="font m-white">2</span>
+						<span class="font">2.75</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="[ live ]">
+			<div class="[ live-title ] flex-container align-center-middle">
+				<p class="font [ live-title-text ]"><span>LIVE IN - PLAY</span></p>
+				<button class="button [ live-title-button ]">
+					<span class="font mr">104 EVENTS</span>
+					<span class="fa fa-angle-right"></span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Play-table -->
+		{% include "parts/play-table.html" %}
+		<!-- End Play-table -->
+		
+		<div class="[ betslip-link active ]">
+			<div class="flex-container align-middle align-justify">
+				<div class="block text-left">
+					<p class="font title text-uppercase [ betslip-link-count ]" data="2">Bet slip</p>
+				</div>
+				<div class="block text-right">
+					<p class="font">Multiply Odds</p>
+					<p class="font title">35.92</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{% include "parts/script.html" %}
+</body>
+</html>

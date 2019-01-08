@@ -1,0 +1,46 @@
+.languages
+	flex-wrap: wrap
+	position: absolute
+	top: 100%
+	left: 0
+	background-color: #556e75
+	z-index: 3
+	width: 300px
+	max-height: 300px
+	border:
+		top: 1px solid #405257
+		bottom: 1px solid #405257
+	&.active
+		display: flex
+	&.not-active
+		display: none
+	&-link
+		position: relative
+		width: 50%
+		height: 30px
+		padding: 5px 10px
+		margin-bottom: -1px
+		color: $m-white
+		border:
+			left: 1px solid #405257
+			right: 1px solid #405257
+			bottom: 1px solid #405257
+		&:nth-child(odd)
+			border-right: 0
+		&:nth-child(even)
+			border:
+				left: 0
+				right: 0
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			bottom: 0
+			background-color: $primary
+		&:hover,
+		&.active
+			color: #fff
+			background-color: #405257
+			&:before
+				width: 4px

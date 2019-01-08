@@ -1,0 +1,152 @@
+$green-bg: #096037
+$brown-bg: #8d3209
+$blue-bg: #1e407a
+$violet-bg: #8e3793
+.play
+	&-wrapper
+		border-radius: 5px
+		overflow: hidden
+		margin-bottom: 10px
+		&.green-bg
+			background-color: $green-bg
+			.play-wrapper-link
+				border: 
+					left: 1px solid darken($green-bg, 10%)
+					top: 1px solid darken($green-bg, 10%)
+					right: 1px solid lighten($green-bg, 10%)
+					bottom: 1px solid lighten($green-bg, 10%)
+				.play-link
+					background-color: darken($green-bg, 5%)
+		&.brown-bg
+			background-color: $brown-bg
+			.play-wrapper-link
+				border: 
+					left: 1px solid darken($brown-bg, 10%)
+					top: 1px solid darken($brown-bg, 10%)
+					right: 1px solid lighten($brown-bg, 10%)
+					bottom: 1px solid lighten($brown-bg, 10%)
+				.play-link
+					background-color: darken($brown-bg, 5%)
+		&.blue-bg
+			background-color: $blue-bg
+			.play-wrapper-link
+				background-color: darken($blue-bg, 5%)
+				border: 
+					left: 1px solid darken($blue-bg, 10%)
+					top: 1px solid darken($blue-bg, 10%)
+					right: 1px solid lighten($blue-bg, 10%)
+					bottom: 1px solid lighten($blue-bg, 10%)
+				.play-link
+					background-color: darken($blue-bg, 7%)
+		&.violet-bg
+			background-color: $violet-bg
+			.play-wrapper-link
+				border: 
+					left: 1px solid darken($violet-bg, 10%)
+					top: 1px solid darken($violet-bg, 10%)
+					right: 1px solid lighten($violet-bg, 10%)
+					bottom: 1px solid lighten($violet-bg, 10%)
+				.play-link
+					background-color: darken($violet-bg, 5%)
+
+		&-link
+			border-radius: 5px
+			overflow: hidden
+			margin: 0 5px 5px 5px
+
+	&-category
+		background: #5d6067
+		background: linear-gradient(180deg, #5d6067 48%, #393c42 100%)
+		height: $base-height
+		padding: 0 25px 0 10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		position: relative
+		margin-bottom: 1px
+		&:before
+			content: ""
+			position: absolute
+			font-family: FontAwesome
+			color: #fff
+			font-size: 20px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover
+			background-color: #fff
+		
+		&.closed
+			&:hover
+				&:before
+					content: "\f107"
+		&.open
+			&:hover
+				&:before
+					content: "\f106"
+
+		&-icon
+			color: #fff
+			font-size: 20px
+			margin-right: 10px
+			order: 1
+		&-text
+			color: #fff
+			order: 2
+			text-transform: uppercase
+
+	&-subcategory
+		height: $base-height
+		padding: 0 10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		position: relative
+		margin-bottom: 1px
+		&:before
+			content: ""
+			position: absolute
+			font-family: FontAwesome
+			color: #fff
+			font-size: 20px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+		
+		&.closed
+			&:hover
+				&:before
+					content: "\f107"
+		&.open
+			&:hover
+				&:before
+					content: "\f106"
+
+		&-icon
+			height: auto
+			max-width: 23px
+			margin-right: 5px
+		&-text
+			color: #fff
+
+
+	&-link
+		padding: 10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		margin-bottom: 1px
+		&-block
+			&:first-child
+				width: 65%
+				order: 2
+			&:last-child
+				width: 15%
+				order: 3
+		.sport-icon
+			order: 1
+		&:hover
+			*
+				color: #fff

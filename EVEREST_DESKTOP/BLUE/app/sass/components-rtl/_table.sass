@@ -1,0 +1,70 @@
+.table
+	background-color: #556e75
+	&-row
+		display: flex
+		align-items: center
+		height: $base-height
+		margin-bottom: 1px
+		&:last-child
+			margin-bottom: 0
+	&-cell
+		height: 100%
+		width: 100%
+		margin-left: 1px
+		&:last-child
+			margin-left: 0
+		&.not-active
+			position: relative
+			cursor: default
+			pointer-events: none
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				top: 0
+				bottom: 0
+				opacity: 0.6
+				background-color: #5f6b74 !important
+
+	&-category
+		background-color: $sixth
+		height: $base-height
+		padding: 0 10px 0 25px
+		cursor: pointer
+		display: flex
+		align-items: center
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			font-family: FontAwesome
+			color: #fff
+			font-size: 20px
+			left: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover
+			background-color: lighten($sixth, 10%)
+		
+		&.closed
+			&:hover
+				&:before
+					content: "\f107"
+		&.open
+			&:hover
+				&:before
+					content: "\f106"
+
+		&-icon
+			color: #fff
+			font-size: 20px
+			margin-left: 10px
+		&-text
+			color: $primary
+			text-transform: uppercase
+		&-score
+			color: #fff
+			margin:
+				left: 10px
+				right: auto

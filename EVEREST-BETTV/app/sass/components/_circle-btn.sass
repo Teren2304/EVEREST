@@ -1,0 +1,47 @@
+.btn-cof
+	min-height: 52px
+	min-width: 52px
+	max-height: 52px
+	max-width: 52px
+	font-weight: bold
+	margin: 2px
+	border: 2px solid lighten($grey, 15%)
+	&:before
+		content: attr(data-value)
+	&:first-child
+		margin-left: 0
+	&:last-child
+		margin-right: 0
+
+	&--circle
+		border-radius: 100%
+	&--square
+		border-radius: 3px
+
+	&--active
+		border: 3px solid orange
+	&--not-active
+		background-color: lighten($grey, 10%)!important
+		border-color: darken($grey, 15%)
+
+	&--yellow
+		background-color: yellow
+	&--white
+		background-color: white
+	&--black
+		background-color: black
+		color: #fff
+	&--red
+		background-color: red
+		color: #fff
+	&--pink
+		background-color: darken(pink, 25%)
+		color: #fff
+	&--green
+		background-color: green
+		color: #fff
+	&--blue
+		background-color: blue
+		color: #fff
+	&--grey
+		background-color: transparent

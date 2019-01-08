@@ -1,0 +1,15 @@
+<div class="[ hot ] flex-container align-middle">
+	<div class="[ hot-title ]">
+		<p class="font text-uppercase text-nowrap">Hot news</p>
+	</div>
+	<marquee class="[ hot-list ]">
+		<div class="flex-container align-middle">
+		{% for i in range(0, 20) %}
+			<p class="font white [ hot-item ]">
+				<strong>Tennis {{ i }}:</strong>
+				<span>Berdych blasts new rule</span>
+			</p>
+		{%- endfor %}
+		</div>
+	</marquee>
+</div>

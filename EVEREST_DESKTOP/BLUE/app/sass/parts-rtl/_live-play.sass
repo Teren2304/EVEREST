@@ -1,0 +1,116 @@
+.live-play
+	background-color: $third
+	&-category
+		cursor: pointer
+		padding: 5px 10px
+		position: relative
+		background-color: $sixth
+		height: $base-height
+		margin-bottom: 10px
+		&:before
+			content: ""
+			position: absolute
+			font-family: FontAwesome
+			color: #fff
+			font-size: 20px
+			left: 10px
+			top: 50%
+			transform: translateY(-50%)
+		&:hover,
+		&.active
+			background-color: lighten($sixth, 5%)
+		&.primary
+			background-color: $primary
+			&:hover,
+			&.active
+				background-color: lighten($primary, 5%)
+		&.closed
+			&:hover
+				&:before
+					content: "\f107"
+		&.open
+			&:hover
+				&:before
+					content: "\f106"
+		*
+			color: #fff
+			text-transform: uppercase
+	&-header
+		height: $base-height
+		width: 100%
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			height: 2px
+			width: 100%
+			left: 0
+			bottom: 0
+			right: 0
+			background-color: $primary
+		&-link
+			height: 100%
+			padding: 10px
+			width: auto
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #2cb4de
+			margin-left: 1px
+			&:last-child
+				margin-left: 0
+			*
+				color: $m-white
+			&.active,
+			&:hover
+				background-color: $primary
+				*
+					color: #fff
+	&-menu
+		cursor: pointer
+		padding: 5px 10px
+		position: relative
+		background-color: $primary
+		height: $base-height
+		margin-bottom: 10px
+		&-link
+			padding: 0 7px
+			color: #fff
+			border-left: 1px solid #fff
+			&:last-child
+				border-left: 0
+	.table
+		display: table
+		table-layout: fixed
+		width: 100%
+		border:
+			collapse: unset
+			spacing: 2px
+		.row
+			width: 100%
+			display: table-row
+		.cell
+			display: table-cell
+			height: $base-height
+			background-color: $fourth
+			vertical-align: middle
+			&:nth-child(1)
+				width: 16%
+				padding: 0 5px
+			&:nth-child(2)
+				width: 28%
+			&:nth-child(3)
+				width: auto
+			&:nth-child(4)
+				width: 28%
+			&:nth-child(5)
+				width: 7%
+				.button
+					justify-content: center
+			&:nth-child(6)
+				width: calc(#{$base-height} + 2px)
+			*
+				color: #fff
+			& > .flex-container
+				height: 100%
+				width: 100%

@@ -1,0 +1,161 @@
+{% include "parts/head.html" %}
+<body>
+<div class="blur none">
+{% include "parts/header.html" %}
+<div class="main">
+	<div class="container flex-container" style="margin-bottom: 10px;">
+		<div class="content center">
+			{% include "parts/hot.html" %}
+		</div>
+	</div>
+	<div class="container flex-container" style="margin-bottom: 10px;">
+		<div class="content center">
+			<div class="[ slider ]">
+				<button class="button fa fa-angle-left slider-prev"></button>
+				<div class="[ slider-wrapper ]">
+					{% for i in range(5, 20) %}
+					<a class="[ slider-link ]">
+						<p class="sports-{{ i }} [ slider-icon ]"></p>
+						<p class="font ellipsis [ slider-text ]">Футбол</p>
+					</a>
+					{%- endfor %}
+				</div>
+				<button class="button fa fa-angle-right slider-next"></button>
+			</div>
+			<div class="[ result-table-wrapper ]">
+				<div class="[ result-table-menu ]">
+					<div class="flex-container align-middle">
+						<p class="sports-4"></p>
+						<p class="font primary ml text-transform">FOOTBALL:</p>
+						<p class="font ellipsis ml">National - France</p>
+					</div>
+					<div class="[ menu-default ] flex-container align-middle">
+						<a href="#" class="font text-uppercase [ menu-default-item border ]">Main Bets</a>
+						<a href="#" class="font text-uppercase [ menu-default-item border ]">Number of goals</a>
+						<a href="#" class="font text-uppercase [ menu-default-item border ]">Next goal</a>
+					</div>
+				</div>
+				<div class="[ play-subcategory closed ]">
+					<img src="./img/icon_country/Ukraine.ico" class="[ play-subcategory-icon ]">
+					<p class="[ play-subcategory-text ] font">Ukraine</p>	
+				</div>
+				{% for i in range(0, 3) %}
+				<div class="[ result-table ] flex-container align-middle">
+					<div class="[ result-table-left ] flex-container align-middle">
+						<div class="block w20 text-center">
+							<p class="font [ team-period ]">1st Half</p>
+							<p class="font bold [ team-time ]">35:35</p>
+						</div>
+						<div class="flex-container align-center-middle w68">
+							<p class="font [ team-name ]">Manchester City</p>
+							<p class="font [ team-score ]">0:0</p>
+							<p class="font [ team-name ]">Manchester City</p>
+						</div>
+						<div class="block flex-container flex-dir-column align-center-middle w12">
+							<button class="sport-icon field [ team-button ]"></button>
+							<button class="sport-icon play [ team-button ]"></button>
+						</div>
+					</div>
+					<div class="[ result-table-right ]">
+						<div class="flex-container align-middle">
+							<p class="font white ml">Fultime Result</p>
+						</div>
+						<div class="flex-container align-middle">
+							<button class="button reload fa fa-angle-left"></button>				
+							<button class="button coefficient w33">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font down blick">3.70</p>
+							</button>
+							<button class="button coefficient w25">
+								<p class="font ellipsis">X</p>
+								<p class="font up blick">1.11</p>
+							</button>
+							<button class="button coefficient w33">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font down blick">3.70</p>
+							</button>
+							<button class="button reload fa fa-angle-right"></button>
+							<button class="button coefficient">
+								<p class="font ellipsis">+467</p>
+							</button>
+						</div>
+					</div>
+				</div>
+				{%- endfor %}
+				<div class="[ play-subcategory closed ]">
+					<img src="./img/icon_country/Ukraine.ico" class="[ play-subcategory-icon ]">
+					<p class="[ play-subcategory-text ] font">Ukraine</p>	
+				</div>
+				<div class="[ result-table ] flex-container align-middle">
+					<div class="[ result-table-left ] flex-container align-middle">
+						<div class="block w20 text-center">
+							<p class="font [ team-period ]">1st Half</p>
+							<p class="font bold [ team-time ]">35:35</p>
+						</div>
+						<div class="flex-container align-middle align-justify w68">
+							<div class="block w68">
+								<p class="font [ team-name ] ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus earum cupiditate error modi voluptatum laboriosam placeat voluptatibus. Soluta laboriosam est possimus consequatur, dolor fugit, aliquam ut molestias, perspiciatis distinctio dolores!</p>
+								<p class="font [ team-name ] ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ad doloremque esse accusantium sed numquam eius voluptates dolore modi quaerat voluptas amet nisi, pariatur dolores et quo recusandae reiciendis quasi.</p>
+							</div>
+							<table class="[ team-table ]">
+								<tr>
+									<td></td>
+									<td><p class="font small primary">5</p></td>
+									<td><p class="font small primary">5</p></td>
+									<td><p class="font small white">6</p></td>
+								</tr>
+								<tr>
+									<td><div class="circle"></div></td>
+									<td><p class="font small primary">5</p></td>
+									<td><p class="font small primary">5</p></td>
+									<td><p class="font small white">6</p></td>
+								</tr>
+							</table>
+						</div>
+						<div class="block flex-container flex-dir-column align-center-middle w12">
+							<button class="sport-icon play [ team-button ]"></button>
+							<button class="sport-icon tennis [ team-button ]"></button>
+						</div>
+					</div>
+					<div class="[ result-table-right ]">
+						<div class="flex-container align-middle">
+							<p class="font white ml">Fultime Result</p>
+						</div>
+						<div class="flex-container align-middle">
+							<button class="button reload fa fa-angle-left"></button>				
+							<button class="button coefficient w33">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font down blick">3.70</p>
+							</button>
+							<button class="button coefficient w25">
+								<p class="font ellipsis">X</p>
+								<p class="font up blick">1.11</p>
+							</button>
+							<button class="button coefficient w33">
+								<p class="star"></p>
+								<p class="font ellipsis mra">FC Rouen</p>
+								<p class="font down blick">3.70</p>
+							</button>
+							<button class="button reload fa fa-angle-right"></button>
+							<button class="button coefficient">
+								<p class="font ellipsis">+467</p>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content wide">
+			{% include "side/right.html" %}
+		</div>
+	</div>
+</div>
+{% include "parts/footer.html" %}
+</div>
+{% include "parts/sign-up.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+.live
+	&-title
+		background-color: #fff
+		height: $base-height
+		*
+			color: #000
+		&-text
+			flex-grow: 1
+			text-align: right
+			padding-right: 5px
+			span
+				display: inline-block
+		&-button
+			white-space: nowrap
+			max-width: 100px
+			background-color: #fff
+			border-left: 1px solid darken(#fff, 15%)
+			flex-direction: row-reverse
+			*
+				margin:
+					right: 5px
+					left: 0
+				&:last-child
+					margin-right: 0
+			&.active
+				background-color: darken(#fff, 5%)
+			&:before
+				font-size: 20px

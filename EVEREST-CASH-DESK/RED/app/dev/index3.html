@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/sports-icon.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>Everest</title>
+</head>
+<body>
+
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+
+<div class="main">
+	<div class="container flex-container">
+		<div class="content center overflow-visible">
+		
+
+			<div class="[ service-header ]">
+				<div class="[ tab-header ] flex-container align-middle">
+					<a class="[ tab-link active ] font" data="#tab-body-1">Печать прематч</a>
+					<a class="[ tab-link ] font" data="#tab-body-2">Печать выбраных событий</a>
+					<a class="[ tab-link ] font" data="#tab-body-3">Печать результатов</a>
+				</div>
+			</div>
+			<div class="tab-body [ service-tab-body active ]" id="tab-body-1">
+				<div class="[ service-body ]">
+					<div class="[ service-time ] flex-container align-middle">
+						<p class="font white text-uppercase text-nowrap mr">Диапазон времени</p>
+						<select class="select [ service-select ]">
+							<option value="1">1 день</option>
+							<option value="2">2 день</option>
+							<option value="3">3 день</option>
+							<option value="4">4 день</option>
+						</select>
+					</div>
+					<div class="flex-container">
+						<div class="[ service-wrapper active ]">
+							<div class="[ service-title ] flex-container align-middle">
+								<p class="font">Спорт</p>
+							</div>
+							<div class="[ service-block ] scroll">
+								<label class="[ service-label ]">
+									<input type="checkbox" class="checkbox">
+									<p class="font">Все</p>
+								</label>
+								{% set sport = [
+									{id: "7", name: "Баскетбол"}, 
+									{id: "4", name: "Футбол"},
+									{id: "5", name: "Теннис"}, 
+									{id: "4", name: "Волейбол"}, 
+									{id: "9", name: "Хокей"},
+									{id: "7", name: "Баскетбол"}, 
+									{id: "4", name: "Футбол"},
+									{id: "5", name: "Теннис"}, 
+									{id: "4", name: "Волейбол"}, 
+									{id: "9", name: "Хокей"}
+								] %}
+								{% for item in sport %}
+									<div class="[ service-label open ]">
+										<input type="checkbox" class="checkbox">
+										<p class="sports-{{item.id}}"></p>
+										<p class="font">{{item.name}}</p>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="[ service-wrapper active ]">
+							<div class="[ service-title ] flex-container align-middle">
+								<p class="font">Страны</p>
+							</div>
+							<div class="[ service-block ] scroll">
+								<label class="[ service-label ]">
+									<input type="checkbox" class="checkbox">
+									<p class="font">Все</p>
+								</label>
+								{% set country = [
+									"Argentina", 
+									"Armenia",
+									"Australia",
+									"Austria",
+									"Bahrain",
+									"Belarus",
+									"Belgium",
+									"Bolivia",
+									"Brazil"
+								] %}
+								{% for item in country %}
+									<div class="[ service-label open ]">
+										<input type="checkbox" class="checkbox">
+										<img src="./img/icon_country/{{item}}.ico" class="[ play-subcategory-icon ]">
+										<p class="[ play-subcategory-text ] font">{{item}}</p>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="[ service-wrapper active ]">
+							<div class="[ service-title ] flex-container align-middle">
+								<p class="font">Турниры</p>
+							</div>
+							<div class="[ service-block ] scroll">
+								<label class="[ service-label ]">
+									<input type="checkbox" class="checkbox">
+									<p class="font">Все</p>
+								</label>
+								{% set league = [ 
+									"All",
+									"Premier League",
+									"U23 Premier League",
+									"U23 Professional Devel League"
+								] %}
+								{% for item in league %}
+									<label class="[ service-label ]">
+										<input type="checkbox" class="checkbox">
+										<p class="font">{{item}}</p>
+									</label>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="[ service-table table ]">
+						<div class="row">
+							<div class="cell">
+								<p class="font">Спорт</p>
+							</div>
+							<div class="cell">
+								<p class="font">Страны</p>
+							</div>
+							<div class="cell">
+								<p class="font">Турниры</p>
+							</div>
+							<div class="cell">
+								<label class="flex-container align-middle">
+									<input type="checkbox" class="checkbox white">
+									<span class="font ml">Все</span>
+								</label>
+							</div>
+							<div class="cell"></div>
+						</div>
+						{% for i in range(1, 3) %}
+							<div class="row">
+								<div class="cell">
+									<p class="sports-4"></p>
+									<p class="font ml">Баскетбол</p>
+								</div>
+								<div class="cell">
+									<p class="font">США</p>
+								</div>
+								<div class="cell">
+									<p class="font">ВСЕ</p>
+								</div>
+								<div class="cell">
+									<label class="flex-container align-middle">
+										<input type="checkbox" class="checkbox">
+										<span class="font ml">Доп.ставки</span>
+									</label>
+								</div>
+								<div class="cell">
+									<button class="button primary square">
+										<span class="close"></span>
+									</button>
+								</div>
+							</div>
+						{%- endfor %}					
+					</div>
+				</div>	
+				<div class="[ service-footer ]">
+					<div class="flex-container align-middle">
+						<button class="button primary [ service-button disabled ]">Печать</button>
+						<button class="button primary [ service-button ]">Очистить</button>
+					</div>
+				</div>
+			</div>
+			<div class="tab-body [ service-tab-body ]" id="tab-body-2">
+				<div class="[ service-body ]">
+					<div class="events">
+					<input type="text" class="field [ service-field events-field ]" value="321">
+						<div class="[ events-dropdown not-active ] scroll">
+							{% for i in range(1, 15) %}
+								<div class="[ events-dropdown-list ] flex-container align-middle">
+									<p class="font">8321</p>
+									<p class="font">Ice Hockey</p>
+									<strong class="font ellipsis">Zauralye Kurgan-Sokol Krasnoyarsk</strong> 
+									<p class="font">VHL</p>
+									<p class="font">25.09 17:30</p>
+								</div>
+							{%- endfor %}
+						</div>
+					</div>
+					<div class="[ events-wrapper ]">
+						{% for i in range(1, 15) %}
+							<div class="[ events-list ] flex-container align-middle">
+								<div class="[ events-list-id ] flex-container align-middle">
+									<p class="font text-uppercase mr">ID:</p>
+									<p class="font text-uppercase">10123</p>
+								</div>
+								<div class="[ events-list-sport ] flex-container align-middle">
+									<p class="sports-4"></p>
+									<p class="font ml">Футболл</p>
+								</div>
+								<div class="[ events-list-league ]">
+									<p class="font ellipsis">Emperor Cup</p>
+								</div>
+								<div class="[ events-list-name ]">
+									<p class="font ellipsis">Kashima Antlers - Sanfrecce Hiroshima</p>
+								</div>
+								<div class="[ events-list-date ]">
+									<p class="font">26.09 14:00	</p>
+								</div>
+							</div>
+						{%- endfor %}
+					</div>
+				</div>
+				<div class="[ service-footer ]">
+					<div class="flex-container align-middle">
+						<button class="button primary [ service-button disabled ]">Печать</button>
+						<button class="button primary [ service-button ]">Очистить</button>
+					</div>
+				</div>
+			</div>
+			<div class="tab-body [ service-tab-body ]" id="tab-body-3">
+				<div class="[ service-body ]">
+					<div class="[ service-time ] flex-container align-middle">
+						<p class="font white text-uppercase text-nowrap mr">Диапазон времени</p>
+						<select class="select [ service-select ]">
+							<option value="1">24.09.2018</option>
+							<option value="2">24.09.2018</option>
+							<option value="3">24.09.2018</option>
+							<option value="4">24.09.2018</option>
+						</select>
+					</div>
+					<div class="flex-container">
+						<div class="[ service-wrapper active ]">
+							<div class="[ service-title ] flex-container align-middle">
+								<p class="font">Спорт</p>
+							</div>
+							<div class="[ service-block ] scroll">
+								<label class="[ service-label ]">
+									<input type="checkbox" class="checkbox">
+									<p class="font">Все</p>
+								</label>
+								{% set sport = [
+									{id: "7", name: "Баскетбол"}, 
+									{id: "4", name: "Футбол"},
+									{id: "5", name: "Теннис"}, 
+									{id: "4", name: "Волейбол"}, 
+									{id: "9", name: "Хокей"},
+									{id: "7", name: "Баскетбол"}, 
+									{id: "4", name: "Футбол"},
+									{id: "5", name: "Теннис"}, 
+									{id: "4", name: "Волейбол"}, 
+									{id: "9", name: "Хокей"}
+								] %}
+								{% for item in sport %}
+									<div class="[ service-label open ]">
+										<input type="checkbox" class="checkbox">
+										<p class="sports-{{item.id}}"></p>
+										<p class="font">{{item.name}}</p>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="[ service-wrapper active ]">
+							<div class="[ service-title ] flex-container align-middle">
+								<p class="font">Страны</p>
+							</div>
+							<div class="[ service-block ] scroll">
+								<label class="[ service-label ]">
+									<input type="checkbox" class="checkbox">
+									<p class="font">Все</p>
+								</label>
+								{% set country = [
+									"Argentina", 
+									"Armenia",
+									"Australia",
+									"Austria",
+									"Bahrain",
+									"Belarus",
+									"Belgium",
+									"Bolivia",
+									"Brazil"
+								] %}
+								{% for item in country %}
+									<div class="[ service-label open ]">
+										<input type="checkbox" class="checkbox">
+										<img src="./img/icon_country/{{item}}.ico" class="[ play-subcategory-icon ]">
+										<p class="[ play-subcategory-text ] font">{{item}}</p>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+						<div class="[ service-wrapper active ]">
+							<div class="[ service-title ] flex-container align-middle">
+								<p class="font">Турниры</p>
+							</div>
+							<div class="[ service-block ] scroll">
+								<label class="[ service-label ]">
+									<input type="checkbox" class="checkbox">
+									<p class="font">Все</p>
+								</label>
+								{% set league = [ 
+									"All",
+									"Premier League",
+									"U23 Premier League",
+									"U23 Professional Devel League"
+								] %}
+								{% for item in league %}
+									<label class="[ service-label ]">
+										<input type="checkbox" class="checkbox">
+										<p class="font">{{item}}</p>
+									</label>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="[ service-table table small ]">
+						<div class="row">
+							<div class="cell">
+								<p class="font">Спорт</p>
+							</div>
+							<div class="cell">
+								<p class="font">Страны</p>
+							</div>
+							<div class="cell">
+								<p class="font">Турниры</p>
+							</div>
+							<div class="cell"></div>
+						</div>
+						{% for i in range(1, 3) %}
+							<div class="row">
+								<div class="cell">
+									<p class="sports-4"></p>
+									<p class="font ml">Баскетбол</p>
+								</div>
+								<div class="cell">
+									<p class="font">США</p>
+								</div>
+								<div class="cell">
+									<p class="font">ВСЕ</p>
+								</div>
+								<div class="cell">
+									<button class="button primary square">
+										<span class="close"></span>
+									</button>
+								</div>
+							</div>
+						{%- endfor %}					
+					</div>
+				</div>	
+				<div class="[ service-footer ]">
+					<div class="flex-container align-middle">
+						<button class="button primary [ service-button disabled ]">Печать</button>
+						<button class="button primary [ service-button ]">Очистить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>

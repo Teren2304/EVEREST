@@ -1,0 +1,23 @@
+.game
+	border: 3px solid $border-color
+	padding: 10px
+	margin: 3px
+	overflow: hidden
+	&:active,
+	&--active
+		border-color: #000
+	*
+		margin-right: 10px
+	&__name
+		font-size: 18px
+		color: lighten(yellow, 40%)
+	&__duration
+		font-weight: bold
+		span
+			margin: 0 11px
+		&--start
+			span
+				color: #fff
+		&--not-start
+			span
+				color: $red

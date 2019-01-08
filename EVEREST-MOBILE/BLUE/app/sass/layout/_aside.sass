@@ -1,0 +1,49 @@
+.aside
+	position: fixed
+	left: 0
+	top: 0
+	bottom: 0
+	width: 290px
+	background-color: $third
+	z-index: 12
+	transition: all .5s
+	&.active
+		left: 0
+	&.not-active
+		left: -290px
+
+	.favourite
+		&-category
+			padding: 5px 10px
+			background-color: $primary
+			height: $base-height
+			color: #fff
+			text-transform: uppercase
+			margin-bottom: 1px
+
+	.navigation
+		overflow:
+			x: hidden
+			y: auto
+		height: 100%
+		width: 260px
+		background-color: #789198
+		&-link
+			height: $base-height
+			background-color: $sixth
+			padding:
+				left: 10px
+				right: 10px
+			margin-bottom: 1px
+			*
+				&:nth-child(1)
+					color: $primary
+					text-transform: uppercase
+				&:nth-child(2)
+					color: #fff
+			&.active
+				background-color: lighten($sixth, 5%)
+	&-close
+		position: absolute
+		right: 5px
+		top: 7px

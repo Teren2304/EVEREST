@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/sports-icon.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>Everest</title>
+</head>
+<body>
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+<div class="main">
+	<div class="container flex-container">
+		<div class="content center">
+			<div class="[ players ]">
+				<div class="[ players-header ]">
+					<div class="[ tab-header ] flex-container align-middle">
+						<a class="[ tab-link active ] font" data="#tab-body-1">Create account</a>
+						<a class="[ tab-link ] font" data="#tab-body-2">Deposit</a>
+						<a class="[ tab-link ] font" data="#tab-body-3">Withdrawal</a>
+						<a class="[ tab-link ] font" data="#tab-body-4">Orders</a>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body active ]" id="tab-body-1">
+					<div class="[ players-body ]">
+						<div class="[ players-balance ] flex-container align-justify">
+							<p class="font white">Activation amount:</p>
+							<select class="select [ players-select ]">
+								<option value="1">10 USD</option>
+							</select>
+							<p class="font white sm">USD</p>
+						</div>
+						<p class="font [ players-text ]">First Name: <sup class="font primary">*</sup></p>
+						<input type="text" class="[ players-field ] field">
+						<p class="font [ players-text ]">Last Name: <sup class="font primary">*</sup></p>
+						<input type="text" class="[ players-field ] field">
+						<div class="flex-container align-bottom">
+							<div class="w50 mr">
+								<p class="font [ players-text ]">Gender:</p>
+								<div class="flex-container align-middle mb">
+									<input type="radio" class="radio" id="man" name="male" value="man" checked="">
+									<label for="man" class="font white ml">Male</label>
+								</div>
+								<div class="flex-container align-middle mt">
+									<input type="radio" class="radio" id="woman" name="male" value="woman">
+									<label for="woman" class="font white ml">Female</label>
+								</div>
+								<p class="font [ players-text ]">Email address: <sup class="font primary">*</sup></p>
+								<input type="text" class="[ players-field ] field">
+							</div>
+							<div class="w50 ml">
+								<p class="font [ players-text ]">Confirmation by:</p>
+								<div class="flex-container align-middle mb">
+									<input type="radio" class="radio" id="email" name="email" value="man" checked="">
+									<label for="email" class="font white ml">Email</label>
+								</div>
+								<div class="flex-container align-middle mt">
+									<input type="radio" class="radio" id="emailsms" name="email" value="emailsms">
+									<label for="emailsms" class="font white ml">Email and sms</label>
+								</div>
+								<p class="font text-nowrap [ players-text ]">Mobile number (example: +79161234567):</p>
+								<input type="text" class="[ players-field ] field" value="+">
+							</div>
+						</div>
+					</div>
+					<div class="[ players-footer ] flex-container align-middle">
+						<button class="button primary [ players-button disabled ]">Register</button>
+						<button class="button primary [ players-button ]">Clear</button>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body ]" id="tab-body-2">
+					<div class="[ players-body ]">
+						<div class="[ tab-body ]">
+							<p class="font [ players-text ]">Player ID: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]">Amount: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]" style="margin: 20px 0;">Currency: (<strong>USD</strong>)</p>
+
+							<p class="font [ players-text ]">Cashier password: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ players-field ] field">
+						</div>
+					</div>
+					<div class="[ players-footer ] flex-container align-middle">
+						<button class="button primary [ players-button disabled ]">Next</button>
+						<button class="button primary [ players-button ]">Clear</button>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body ]" id="tab-body-3">
+					<div class="[ players-body ]">
+						<div class="[ tab-body ]">
+							<p class="font [ players-text ]">Player ID: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]">Amount: <sup class="font primary">*</sup></p>
+							<input type="text" class="[ players-field ] field">
+				
+							<p class="font [ players-text ]" style="margin: 20px 0;">Currency: (<strong>USD</strong>)</p>
+
+							<p class="font [ players-text ]">Cashier password: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ players-field ] field">
+						</div>
+					</div>
+					<div class="[ players-footer ] flex-container align-middle">
+						<button class="button primary [ players-button disabled ]">Create order</button>
+						<button class="button primary [ players-button ]">Cancel</button>
+					</div>
+				</div>
+				<div class="tab-body [ players-tab-body ]" id="tab-body-4">
+					<div class="[ players-body ]" style="width: 100%">
+						<div class="[ tab-body ]">
+							<div class="table [ players-table ]">
+								<div class="row">
+									<div class="cell"><strong>#</strong></div>
+									<div class="cell"><strong>Status</strong></div>
+									<div class="cell"><strong>Amount</strong></div>
+									<div class="cell"><strong>Expire</strong></div>
+								</div>
+								<div class="row align-center">
+									<p class="font">Not found</p>
+								</div>
+								{% for i in range(0, 10) %}
+									<div class="row">
+										<div class="cell"><a class="font text-underline">12415{{i}}</a></div>
+										<div class="cell"><p class="font">New</p></div>
+										<div class="cell"><p class="font">1{{i}}.00</p></div>
+										<div class="cell"><p class="font">2{{i}}.07.2018 13:47</p></div>
+									</div>
+								{%- endfor %}
+								<div class="row">
+									<div class="cell">
+										<p class="font">1 order(s)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>

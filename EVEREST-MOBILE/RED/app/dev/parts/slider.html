@@ -1,0 +1,16 @@
+<div class="[ slider ]">
+	<button class="button fa fa-angle-left [ slider-prev ]"></button>
+	<div class="[ slider-wrapper ]">
+		{% for i in range(4, 135) %}
+			<a class="[ slider-link ]">
+				{% if i == 19 %}
+					<span class="sports-4 [ slider-icon ]"></p>
+				{% elif i == 20 %}
+					<span class="sports-5 [ slider-icon ]"></p>
+				{% endif %}
+				<span class="sports-{{ i }} [ slider-icon ]"></p>
+			</a>
+		{%- endfor %}
+	</div>
+	<button class="button fa fa-angle-right [ slider-next ]"></button>
+</div>

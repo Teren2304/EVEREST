@@ -1,0 +1,10 @@
+<div class="[ event ] flex-container align-middle">
+	{% set country = ["Overview", "Event View", "Calendar"] %}
+	{% for item in country %}
+		{% if item == "Overview" %}
+		 <button class="[ event-btn active ] font m-white">{{ item }}</button>
+		{% else %}
+		 <button class="[ event-btn ] font m-white">{{ item }}</button>
+		{% endif %}
+	{% endfor %}
+</div>

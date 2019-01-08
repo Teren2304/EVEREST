@@ -1,0 +1,68 @@
+.monitoring
+	margin-bottom: 10px
+	&-category
+		background-color: #292833
+		height: $base-height
+		padding: 0
+		&.second
+			background-color: #fff
+			.font
+				color: #000
+			.text-nowrap
+				border-right: 1px solid #000
+		.font
+			color: #fff
+			text-transform: uppercase
+		.text-nowrap
+			padding: 0 10px
+			display: flex
+			align-items: center
+			justify-content: center
+			height: $base-height
+			border-right: 1px solid $m-white
+		.font
+			&:first-child
+				color: #fff
+				margin-left: 10px
+				padding: 0 10px
+				display: flex
+				align-items: center
+				justify-content: center
+				height: $base-height
+				background-color: $primary
+
+	&-body
+		display: flex
+		align-items: flex-start
+		background-color: #281420
+		padding: 10px 10px 0 10px
+
+	&-table
+		background-color: transparent!important
+		width: auto
+		text-align: center
+		border:
+			collapse: unset
+			spacing: 2px
+		margin:
+			bottom: 10px
+			right: 10px
+		.row
+			width: 100%
+			display: table-row
+			&:first-child
+				.cell
+					background-color: #292833
+		.cell
+			display: table-cell
+			padding: 10px
+			min-width: 60px
+			height: $base-height
+			background-color: #343341
+			*
+				color: #fff
+			&.primary
+				*
+					color: yellow
+	&-part
+		color: $primary

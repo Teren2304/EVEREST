@@ -1,0 +1,25 @@
+$event-color: #343341
+.event
+	background-color: $event-color
+	height: 100%
+	&-btn
+		height: 100%
+		border: 0
+		flex-grow: 1
+		position: relative
+		background-color: $event-color
+		&:after
+			content: ''
+			width: 0
+			height: 2px
+			background-color: $primary
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+		&:hover,
+		&.active
+			color: #fff
+			&:after
+				transition: all .5s
+				width: 100%

@@ -1,0 +1,26 @@
+.hot
+	background-color: $sixth
+	width: 100%
+	height: 50px
+	&-title
+		min-width: 120px
+		position: relative
+		padding:
+			left: 35px
+			right: 20px
+		color: $primary
+		&:before
+			content: url('../img/hot-icon.png')
+			+absolute-left
+			left: 10px
+
+	&-item
+		padding: 0 10px 0 15px
+		position: relative
+		&:before
+			content: ""
+			height: 8px
+			width: 8px
+			+absolute-left
+			transform: translateY(-50%) rotate(45deg)
+			background-color: #34c6f5

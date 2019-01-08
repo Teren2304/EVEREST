@@ -1,0 +1,24 @@
+.up
+	&:before
+		color: #03c503
+		content: "\f063"
+		transform: rotate(-135deg) translate(20%, -10%)
+.down
+	&:before
+		color: #ed1c24
+		content: "\f063"
+		transform: rotate(-45deg) translate(0, -15%)
+.up,
+.down
+	white-space: nowrap
+	&:before
+		display: inline-block
+		font:
+			family: FontAwesome
+			size: 10px
+		margin:
+			right: 5px
+			left: 3px
+.blick
+	&:before
+		animation: blick .7s linear 5!important

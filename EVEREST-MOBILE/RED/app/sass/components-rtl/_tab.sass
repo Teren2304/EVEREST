@@ -1,0 +1,31 @@
+.tab
+	&-header
+		position: relative
+		height: $base-height
+		background-color: darken($primary, 30%)
+		&.border
+			&:after
+				content: ""
+				position: absolute
+				height: 2px
+				left: 0
+				bottom: 0
+				right: 0
+				background-color: $primary
+
+	&-link
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 10px
+		height: 100%
+		width: 50%
+		margin-left: 1px
+		color: rgba(255, 255, 255, 0.5)
+		background-color: darken($primary, 20%)
+		text-transform: uppercase
+		&:last-child
+			margin-left: 0
+		&.active
+			background-color: $primary
+			color: #fff

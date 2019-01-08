@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/sports-icon.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<title>Everest</title>
+</head>
+<body>
+<!-- Header -->
+{% include "parts/header.html" %}
+<!-- End Header -->
+
+<div class="main">
+	<div class="container flex-container">
+		<div class="content center">
+			<div class="[ setting ]">
+				<div class="[ setting-header ]">
+					<div class="[ tab-header ] flex-container align-middle">
+						<a class="[ tab-link active ] font" data="#tab-body-1">Withdraw</a>
+						<a class="[ tab-link ] font" data="#tab-body-2">Encashment</a>
+						<a class="[ tab-link ] font" data="#tab-body-3">Deposit</a>
+						<a class="[ tab-link ] font" data="#tab-body-4">Shift Close</a>
+					</div>
+				</div>
+				<div class="tab-body [ setting-tab-body active ]" id="tab-body-1">
+					<div class="[ setting-body ]">
+						<p class="font title [ setting-text ]">Withdraw</p>
+						<p class="font [ setting-text ]">Amount (USD): <sup class="font primary">*</sup></p>
+						<input type="text" class="[ setting-field ] field">
+						<p class="font [ setting-text ]">Note:</p>
+						<textarea class="[ setting-textarea ] textarea"></textarea>
+						<p class="font [ setting-text ]">Cashier (password):</p>
+						<input type="password" class="[ setting-field ] field">
+					</div>
+					<div class="[ setting-footer ] flex-container align-middle">
+						<button class="button primary [ setting-button ]">Confirm</button>
+						<button class="button primary [ setting-button ]">Cancel</button>
+					</div>
+				</div>
+				<div class="tab-body [ setting-tab-body ]" id="tab-body-2">
+					<div class="[ setting-body ]">
+						<div class="[ tab-body ]">
+							<p class="font title [ setting-text ]">Encashment</p>
+							<div class="[ setting-balance ] flex-container align-justify">
+								<p class="font white">Balance</p>
+								<p class="font [ setting-balance-cash ] title">5037.00 <span class="font white sm">USD</span></p>
+							</div>
+							<p class="font [ setting-text ]">Encashment Amount: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+				
+							<p class="font [ setting-text ]">Cashier (password): <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+				
+							<p class="font [ setting-text ]">Collector (password): <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+						</div>
+					</div>
+					<div class="[ setting-footer ] flex-container align-middle">
+						<button class="button primary [ setting-button disabled ]">Confirm</button>
+						<button class="button primary [ setting-button ]">Cancel</button>
+					</div>
+				</div>
+				<div class="tab-body [ setting-tab-body ]" id="tab-body-3">
+					<div class="[ setting-body ]">
+						<div class="[ tab-body ]">
+							<p class="font title [ setting-text ]">Deposit</p>
+							<div class="[ setting-balance ] flex-container align-justify">
+								<p class="font white">Balance</p>
+								<p class="font [ setting-balance-cash ] title">5037.00 <span class="font white sm">USD</span></p>
+							</div>
+							<p class="font [ setting-text ]">Amount: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+							<p class="font [ setting-text ]">Note:</p>
+							<textarea class="[ setting-textarea ] textarea"></textarea>
+							<p class="font [ setting-text ]">Cashier (password): <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+						</div>
+					</div>
+					<div class="[ setting-footer ] flex-container align-middle">
+						<button class="button primary [ setting-button disabled ]">Confirm</button>
+						<button class="button primary [ setting-button ]">Cancel</button>
+					</div>
+				</div>
+				<div class="tab-body [ setting-tab-body ]" id="tab-body-4">
+					<div class="[ setting-body ]">
+						<div class="[ tab-body ]">
+							<p class="font title [ setting-text ]">Shift close</p>
+							<div class="[ setting-balance ] flex-container align-justify">
+								<p class="font white">Balance</p>
+								<p class="font [ setting-balance-cash ] title">5037.00 <span class="font white sm">USD</span></p>
+							</div>
+							<p class="font [ setting-text ]">Actual Amount: <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+							<p class="font [ setting-text ]">Note:</p>
+							<textarea class="[ setting-textarea ] textarea"></textarea>
+							<p class="font [ setting-text ]">Cashier (password): <sup class="font primary">*</sup></p>
+							<input type="password" class="[ setting-field ] field">
+						</div>
+					</div>
+					<div class="[ setting-footer ] flex-container align-middle">
+						<button class="button primary [ setting-button disabled ]">Confirm</button>
+						<button class="button primary [ setting-button ]">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/custom.js"></script>
+</body>
+</html>

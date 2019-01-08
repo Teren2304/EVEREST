@@ -1,0 +1,114 @@
+{% include "parts/head.html" %}
+<body>
+<div class="blur none">
+{% include "parts/header.html" %}
+<div class="main">
+	<div class="container flex-container" style="margin-bottom: 10px;">
+		<div class="content left">
+			{% include "parts/event.html" %}
+		</div>
+		<div class="content center">
+			{% include "parts/hot.html" %}
+		</div>
+	</div>
+	<div class="container flex-container" style="margin-bottom: 10px;">
+		<div class="content left">
+			{% include "side/left.html" %}
+		</div>
+		<div class="content center">
+			<div class="flex-container align-middle background [ banner small shadow ]" style="background-image:url('./img/bg--football.png');">
+				<div class="flex-container align-center-middle [ banner-title ]">
+					<p class="sports-4 icon"></p>
+				</div>
+				<p class="font [ banner-text ]">Football</p>
+			</div>
+			<div class="[ table prev-result ]">
+				<div class="[ table-row ]">
+					<div class="[ table-cell prev-result-category ] flex-container align-middle align-justify">
+						<p class="font">Primera Liga (Liga BBVA), Spain</p>
+						<div class="flex-container align-middle">
+							<a class="fa fa-bar-chart [ prev-result-link ]"></a>
+							<a class="fa fa-refresh [ prev-result-link ]"></a>
+						</div>
+					</div>
+				</div>
+				<div class="[ table-row ]">
+					<div class="[ table-cell ]">
+						<p class="font title [ prev-result-title ]">Real Sociedad - Granada CF</p>
+						<p class="font [ prev-result-text ]">5/13/2017, 11:00 PM</p>
+					</div>
+				</div>
+				<div class="[ table-row ]">
+					<div class="[ table-cell ]">
+						<p class="font">5.</p>
+					</div>
+					<div class="[ table-cell ]">
+						<p class="font">Table position</p>
+					</div>
+					<div class="[ table-cell ]">
+						<p class="font">16.</p>
+					</div>
+				</div>
+				<div class="[ table-row ]">
+					<div class="[ table-cell ]">
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+						<span class="font">D</span>
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+					</div>
+					<div class="[ table-cell ]">
+						<p class="font">Last 5 games</p>
+					</div>
+					<div class="[ table-cell ]">
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+						<span class="font">D</span>
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+					</div>
+				</div>
+				<div class="[ table-row ]">
+					<div class="[ table-cell ]">
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+						<span class="font">D</span>
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+					</div>
+					<div class="[ table-cell ]">
+						<p class="font">Head-to-Head</p>
+					</div>
+					<div class="[ table-cell ]">
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+						<span class="font">D</span>
+						<span class="font green">W</span>
+						<span class="font red">L</span>
+					</div>
+				</div>
+				<div class="[ table-row ]">
+					<div class="[ table-cell ]">
+						<p class="font">2.20</p>
+					</div>
+					<div class="[ table-cell ]">
+						<p class="font">Goals/Points(5 games)</p>
+					</div>
+					<div class="[ table-cell ]">
+						<p class="font">0.80</p>
+					</div>
+				</div>
+			</div>
+			{% include "parts/table-coeficient.html" %}
+		</div>
+		<div class="content right">
+			{% include "side/right.html" %}
+		</div>
+	</div>
+</div>
+{% include "parts/footer.html" %}
+</div>
+{% include "parts/sign-up.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

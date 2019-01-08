@@ -1,0 +1,41 @@
+.favourite
+	margin-bottom: 10px
+	&-category
+		padding: 5px 0 5px 20px
+		position: relative
+		height: $base-height
+		border:
+			top: 1px solid #3d3d3d
+			bottom: 1px solid #3d3d3d
+		background-color: #000
+		&:before
+			content: ""
+			width: 10px
+			height: 100%
+			background-color: $second
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+	&-link
+		height: $base-height
+		padding: 5px 10px
+		background-color: #061a25
+		margin-bottom: 1px
+		&:hover,
+		&.active
+			background-color: lighten(#061a25, 5%)
+			*
+				color: #fff
+		*
+			color: rgba(255,255,255,0.6)
+		&-icon
+			font-size: 18px
+			margin-right: 5px
+		&-text
+			flex-grow: 1
+			&:first-child
+				text-align: left
+			&:last-child
+				text-align: right
+				margin-left: 5px

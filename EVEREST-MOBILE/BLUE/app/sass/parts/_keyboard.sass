@@ -1,0 +1,54 @@
+.keyboard
+	&.active
+		display: block
+	&.not-active
+		display: none
+	&-wrapper
+		padding: 5px
+		position: relative
+		background-color: #ededed
+		&:after
+			content: ""
+			position: absolute
+			top: -17px
+			z-index: 1
+			border: 10px solid transparent
+			border-bottom: 10px solid #ededed
+		&:before
+			content: ''
+			border:
+				top: 1px solid #c5c5c5
+				left: 1px solid #c5c5c5
+			position: absolute
+			left: 4px
+			top: 4px
+			bottom: 5px
+			right: 5px
+			z-index: 0
+			background-color: transparent
+		&.left
+			&:after
+				right: 20px
+		&.right
+			&:after
+				left: 20px
+
+	&-button
+		color: #000
+		font-size: 18px
+		border:
+			right: 1px solid #c5c5c5
+			bottom: 1px solid #c5c5c5
+		height: 44px
+		background-color: #fff
+		text-transform: uppercase
+		z-index: 1
+		&.active
+			background-color: #c5c5c5
+		&.primary
+			background-color: $primary
+		&.reset
+			background:
+				image: url('../img/key-reset.svg')
+				repeat: no-repeat
+				position: center

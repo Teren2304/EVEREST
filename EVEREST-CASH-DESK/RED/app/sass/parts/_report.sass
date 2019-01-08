@@ -1,0 +1,166 @@
+$reports-width: 500px
+.reports
+	&-body,
+	&-footer
+		padding: 10px
+	&-body
+		width: $reports-width
+	&-footer
+		background-color: lighten(#281420, 5%)
+	&-header
+		border-bottom: 2px solid $primary
+		.tab-header
+			max-width: $reports-width
+			.tab-link
+				width: auto
+				flex-grow: 0
+	&-tab-body
+		background-color: #281420
+		display: none
+		&.active
+			display: block
+		&.not-active
+			display: none
+
+	&-button
+		width: 100px
+		&:first-child
+			margin-right: 5px
+		&:last-child
+			margin-left: 5px
+		&.disabled
+			background-color: darken($primary, 20%)
+			cursor: default
+			pointer-events: none
+			
+	&-dropdown
+		border-radius: 5px
+		height: 30px
+		width: 60px
+		position: relative
+		background-color: lighten($second, 10%)
+		cursor: pointer
+		overflow: hidden
+		& > *
+			color: #fff
+			border-right: 1px solid #fff
+			width: 50%
+			height: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+		&:hover,
+		&.active
+			&:before
+				background-color: $second
+		&:before
+			content: '\f0d7'
+			width: 50%
+			position: absolute
+			right: 0
+			top: 0
+			bottom: 0
+			color: #fff
+			font-family: FontAwesome
+			display: flex
+			align-items: center
+			justify-content: center
+
+
+
+	&-live
+		background-color: $primary
+		border-radius: 5px
+		color: #fff
+		width: 35px
+		text-align: center
+		text-transform: uppercase
+		&:before
+			content: 'live'
+	&-table
+		& > .row
+			height: $base-height
+			background-color: #fff
+			margin-bottom: 1px
+			&:first-child,
+			&:last-child
+				background-color: lighten($second, 5%)
+				margin-bottom: 0
+				*
+					color: #fff
+			&:last-child
+				width: 100%
+				& > .cell
+					width: 80%
+					justify-content: flex-end
+		.cell
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5)
+				width: 20%
+				padding:
+					left: 10px
+					right: 10px
+				justify-content: flex-start
+			&:nth-child(4),
+			&:nth-child(5)
+				justify-content: flex-end
+
+
+		&.big
+			& > .row
+				height: 100px
+				&:first-child,
+				&:last-child
+					height: 50px
+				&:last-child
+					width: 100%
+					& > .cell
+						width: 85%
+						justify-content: flex-end
+				
+			.cell
+				&:nth-child(1)
+					width: 15%
+				&:nth-child(2)
+					width: 40%
+				&:nth-child(3)
+					width: 10%
+				&:nth-child(4)
+					width: 13%
+				&:nth-child(5)
+					width: 7%
+				&:nth-child(6)
+					width: 5%
+				&:nth-child(7)
+					width: 10%
+			.toggle-table
+				padding-bottom: 5px
+				display: none
+				background-color: #fff
+				margin-bottom: 1px
+				&.active
+					display: block
+				&.not-active
+					display: none
+				&-close
+					width: 50px
+					margin:
+						top: 5px
+						right: 0
+						left: auto
+					display: block
+				.toggle
+					margin-bottom: 0
+					height: 100px
+					&.border
+						.cell
+							border: 0
+							border-bottom: 1px solid #000
+					.cell
+						border-right: 1px solid #000
+						border-bottom: 1px solid #000
+						&:last-child
+							border-right: 0
